@@ -51,6 +51,9 @@
 #ifndef LAYER_Lower
 #define LAYER_Lower 0
 #endif
+#ifndef RGB_STATUS
+#define RGB_STATUS 15 0
+#endif
 
 /* Custom Device-tree */
 
@@ -77,7 +80,8 @@
             label = "RGB_UG_STATUS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_STATUS>;
+            bindings
+                = <&rgb_ug RGB_STATUS>;
         };
     };
 };
@@ -3601,4 +3605,3 @@ macros {
 
     };
 };
-
