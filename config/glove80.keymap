@@ -3497,7 +3497,7 @@ macros {
             bindings = <
   &none               &none               &none                &none               &none                                                                                      &none            &none            &none            &none   &none
   &none               &none               &none                &none               &none   &none                                                                &none         &none            &none            &none            &none   &none
-  &none         &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0   &none                                                          &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
+  &none         &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0   &studio_unlock                                                 &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                           &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed   &none
   &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none   &none   &none   &none   &none       &none  &kp C_MUTE        &bt_0         &bt_1            &bt_2            &bt_3     &out OUT_TOG   &none
   &none               &none               &none                &none               &none           &none   &none   &none   &none  &kp C_STOP    &kp C_PP                      &none            &none            &none            &none   &none
@@ -3552,7 +3552,7 @@ macros {
             bindings = <
   &none    &none   &none   &none   &none                                                                                             &none                &none                &none                &none   &none
   &none    &none   &none   &none   &none            &none                                                       &none                &none                &none                &none                &none   &none
-  &none  &kp F12  &kp F7  &kp F8  &kp F9        &kp PSCRN                                                       &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing          &bootloader   &none
+  &none  &kp F12  &kp F7  &kp F8  &kp F9        &kp PSCRN                                                       &studio_unlock       &to 0      &tog LAYER_Dota    &tog LAYER_Typing          &bootloader   &none
   &none  &kp F11  &kp F4  &kp F5  &kp F6         &kp SLCK                                                       &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
   &none  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &kp K_APP    &none   &none   &none   &none   &none   &none  &tog LAYER_Function    &tog LAYER_System           &kp DELETE       &kp LS(DELETE)   &none
   &none    &none   &none   &none   &none                   &kp SPACE  &kp TAB   &none   &none   &none   &none                        &none                &none                &none                &none   &none
