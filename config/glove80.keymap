@@ -3499,7 +3499,7 @@ macros {
   &none               &none               &none                &none               &none   &none                                                                &none         &none            &none            &none            &none   &none
   &none         &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0   &none                                                          &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                           &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed   &none
-  &none               &none               &none  &tog LAYER_Function   &tog LAYER_System   &none   &none   &none   &none   &none       &none  &kp C_MUTE        &bt_0         &bt_1            &bt_2            &bt_3     &out OUT_TOG   &none
+  &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none   &none   &none   &none   &none       &none  &kp C_MUTE        &bt_0         &bt_1            &bt_2            &bt_3     &out OUT_TOG   &none
   &none               &none               &none                &none               &none           &none   &none   &none   &none  &kp C_STOP    &kp C_PP                      &none            &none            &none            &none   &none
             >;
         };
@@ -3510,7 +3510,7 @@ macros {
   &none               &none               &none               &none               &none   &none                                                         &none       &none      &none      &none      &none   &none
   &none         &bootloader   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                     &kp _REDO  &kp _PASTE  &kp _COPY   &kp _CUT  &kp _UNDO   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                      &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT   &kp CAPS   &none
-  &none               &none               &none   &tog LAYER_Number   &tog LAYER_Cursor   &none   &none   &none   &none   &none    &none   &kp DEL   &kp HOME   &kp PG_DN  &kp PG_UP    &kp END    &kp INS   &none
+  &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Number   &tog LAYER_Cursor   &none   &none   &none   &none   &none    &none   &kp DEL   &kp HOME   &kp PG_DN  &kp PG_UP    &kp END    &kp INS   &none
   &none               &none               &none               &none               &none           &none   &none   &none   &none  &kp RET  &kp BSPC                  &none      &none      &none      &none   &none
             >;
         };
@@ -3521,7 +3521,7 @@ macros {
   &none               &none               &none               &none               &none   &none                                                                         &none                   &none                 &none                    &none      &none   &none
   &none         &bootloader   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                                     &kp _REDO              &kp _PASTE             &kp _COPY                 &kp _CUT  &kp _UNDO   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                                &mmv MOVE_LEFT          &mmv MOVE_DOWN          &mmv MOVE_UP          &mmv MOVE_RIGHT   &mkp MB4   &none
-  &none               &none               &none   &tog LAYER_Symbol    &tog LAYER_Mouse   &none   &none   &none   &none   &none      &none  &mkp MCLK  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT   &mkp MB5   &none
+  &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Symbol    &tog LAYER_Mouse   &none   &none   &none   &none   &none      &none  &mkp MCLK  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT   &mkp MB5   &none
   &none               &none               &none               &none               &none           &none   &none   &none   &none  &mkp RCLK  &mkp LCLK                                           &none                 &none                    &none      &none   &none
             >;
         };
@@ -3532,7 +3532,7 @@ macros {
   &none          &none       &none       &none       &none          &none                                                                &none                &none                &none                &none                &none   &none
   &none   &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)                                                                &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing          &bootloader   &none
   &none    &kp LS(SQT)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(EQUAL)                                                                &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none  &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH)  &kp LS(FSLH)          &none   &none   &none   &none   &none   &none    &tog LAYER_Symbol     &tog LAYER_Mouse                &none                &none   &none
+  &none  &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH)  &kp LS(FSLH)          &none   &none   &none   &none   &none   &none    &tog LAYER_Symbol     &tog LAYER_Mouse           &kp DELETE       &kp LS(DELETE)   &none
   &none          &none       &none       &none       &none                   &kp LS(N0)  &kp LS(MINUS)   &none   &none   &none   &none                        &none                &none                &none                &none   &none
             >;
         };
@@ -3543,7 +3543,7 @@ macros {
   &none      &none   &none   &none   &none      &none                                                        &none                &none                &none                &none                &none   &none
   &none   &kp LBKT  &kp N7  &kp N8  &kp N9   &kp RBKT                                                        &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing          &bootloader   &none
   &none    &kp SQT  &kp N4  &kp N5  &kp N6  &kp EQUAL                                                        &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH  &kp FSLH      &none   &none   &none   &none   &none   &none    &tog LAYER_Number    &tog LAYER_Cursor                &none                &none   &none
+  &none  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH  &kp FSLH      &none   &none   &none   &none   &none   &none    &tog LAYER_Number    &tog LAYER_Cursor           &kp DELETE       &kp LS(DELETE)   &none
   &none      &none   &none   &none   &none               &kp N0  &kp MINUS   &none   &none   &none   &none                        &none                &none                &none                &none   &none
             >;
         };
@@ -3554,7 +3554,7 @@ macros {
   &none    &none   &none   &none   &none            &none                                                       &none                &none                &none                &none                &none   &none
   &none  &kp F12  &kp F7  &kp F8  &kp F9        &kp PSCRN                                                       &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing          &bootloader   &none
   &none  &kp F11  &kp F4  &kp F5  &kp F6         &kp SLCK                                                       &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &kp K_APP    &none   &none   &none   &none   &none   &none  &tog LAYER_Function    &tog LAYER_System                &none                &none   &none
+  &none  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &kp K_APP    &none   &none   &none   &none   &none   &none  &tog LAYER_Function    &tog LAYER_System           &kp DELETE       &kp LS(DELETE)   &none
   &none    &none   &none   &none   &none                   &kp SPACE  &kp TAB   &none   &none   &none   &none                        &none                &none                &none                &none   &none
             >;
         };
