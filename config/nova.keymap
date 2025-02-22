@@ -48,8 +48,6 @@
 
 /* Custom Device-tree */
 
-
-
 /* Glove80 system behavior & macros */
 / {
 #ifdef BT_DISC_CMD
@@ -779,7 +777,7 @@ behaviors {
   #define RIGHT_HAND_KEYS \
                                  5  6  7  8  9 \
                                 15 16 17 18 19 \
-                                25 26 27 28 29 \
+                                25 26 27 28 29
   #define THUMB_KEYS      \
                30 31 32         33 34 35
 
