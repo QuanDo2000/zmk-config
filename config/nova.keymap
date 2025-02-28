@@ -202,7 +202,7 @@
 // NOTE: Use the many #define settings below to customize this keymap!
 #define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
 //#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
-#define OPERATING_SYSTEM 'W' // choose 'L'inux, 'M'acOS, or 'W'indows
+#define OPERATING_SYSTEM 'M' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
 #define SPACE_FORGIVENESS    // allow lingering taps on the space bar
@@ -3262,7 +3262,7 @@ macros {
             bindings = <
         &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0  &studio_unlock  &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG
  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD           &none   &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed
-     &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System           &none        &none         &bt_0            &bt_1            &bt_2            &bt_3
+     &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System           &none   &bt BT_CLR         &bt_0            &bt_1            &bt_2            &bt_3
                                                        &none               &none           &none   &kp C_STOP      &kp C_PP       &kp C_MUTE
             >;
         };

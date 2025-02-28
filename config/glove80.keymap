@@ -507,60 +507,6 @@ combos {
   #ifndef COMBO_FIRING_DECAY
   #define COMBO_FIRING_DECAY 50
   #endif
-  #ifdef LAYER_Gaming
-  combo_gaming_layer_toggle {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T3 POS_LH_T6>;
-    bindings = <&tog LAYER_Gaming>;
-    layers = <0 LAYER_Gaming>;
-  };
-  #endif
-  #ifdef LAYER_Cursor
-  #ifdef _A_TAB
-  combo_alt_tab_switcher {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T1>;
-    bindings = <&mod_tab_chord _A_TAB LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6 7>;
-  };
-  #endif
-
-  combo_ctrl_tab_switcher {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T4 POS_LH_T5>;
-    bindings = <&mod_tab_chord LCTL LAYER_Cursor>;
-    layers = <0 1 2 3 4 5 6 7>;
-  };
-  #endif
-
-  combo_sticky_hyper_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T1 POS_RH_T4>;
-    bindings = <&sk LG(LA(LC(LSHFT)))>;
-    layers = <0 1 2 3 4 5 6 7>;
-  };
-
-  combo_sticky_meh_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T4 POS_RH_T5>;
-    bindings = <&sk LA(LC(LSHFT))>;
-    layers = <0 1 2 3 4 5 6 7>;
-  };
-
-  combo_sticky_AltGr_left {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_LH_T2 POS_LH_T5>;
-    bindings = <&sk RALT>;
-    layers = <0 1 2 3 4 5 6 7>;
-  };
-
-  combo_sticky_AltGr_right {
-    timeout-ms = <COMBO_FIRING_DECAY>;
-    key-positions = <POS_RH_T2 POS_RH_T5>;
-    bindings = <&sk RALT>;
-    layers = <0 1 2 3 4 5 6 7>;
-  };
-
   combo_caps_lock {
     timeout-ms = <COMBO_FIRING_DECAY>;
     key-positions = <POS_LH_T6 POS_RH_T6>;
@@ -3498,7 +3444,7 @@ macros {
   &none               &none               &none                &none               &none   &none                                                                &none         &none            &none            &none            &none   &none
   &none         &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0   &studio_unlock                                                 &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                           &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed   &none
-  &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none   &none   &none   &none   &none       &none  &kp C_MUTE        &bt_0         &bt_1            &bt_2            &bt_3     &out OUT_TOG   &none
+  &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none   &none   &none   &none   &none       &none  &kp C_MUTE   &bt BT_CLR         &bt_0            &bt_1            &bt_2     &out OUT_TOG   &none
   &none               &none               &none                &none               &none           &none   &none   &none   &none  &kp C_STOP    &kp C_PP                      &none            &none            &none            &none   &none
             >;
         };
