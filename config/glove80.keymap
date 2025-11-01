@@ -24,27 +24,28 @@
 
 /* Automatically generated layer name #define */
 #define LAYER_QWERTY 0
-#define LAYER_Typing 1
-#define LAYER_Gaming 2
-#define LAYER_Dota 3
-#define LAYER_LeftPinky 4
-#define LAYER_LeftRingy 5
-#define LAYER_LeftMiddy 6
-#define LAYER_LeftIndex 7
-#define LAYER_RightPinky 8
-#define LAYER_RightRingy 9
-#define LAYER_RightMiddy 10
-#define LAYER_RightIndex 11
-#define LAYER_System 12
-#define LAYER_Cursor 13
-#define LAYER_Mouse 14
-#define LAYER_Symbol 15
-#define LAYER_Number 16
-#define LAYER_Function 17
-#define LAYER_Button 18
-#define LAYER_Factory 19
-#define LAYER_Lower 20
-#define LAYER_Magic 21
+#define LAYER_QWERTY_Mac 1
+#define LAYER_Typing 2
+#define LAYER_Gaming 3
+#define LAYER_Dota 4
+#define LAYER_LeftPinky 5
+#define LAYER_LeftRingy 6
+#define LAYER_LeftMiddy 7
+#define LAYER_LeftIndex 8
+#define LAYER_RightPinky 9
+#define LAYER_RightRingy 10
+#define LAYER_RightMiddy 11
+#define LAYER_RightIndex 12
+#define LAYER_System 13
+#define LAYER_Cursor 14
+#define LAYER_Mouse 15
+#define LAYER_Symbol 16
+#define LAYER_Number 17
+#define LAYER_Function 18
+#define LAYER_Button 19
+#define LAYER_Factory 20
+#define LAYER_Lower 21
+#define LAYER_Magic 22
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -331,35 +332,35 @@
 //#define OPERATING_SYSTEM 'M' // macos
 //#define OPERATING_SYSTEM 'W' // windows
 #endif
-#if OPERATING_SYSTEM == 'M'
-  #define _C      LG
-  #define _A_TAB  LGUI
-  #define _G_TAB  LALT
-  #define _REDO   _C(LS(Z))
-  #define _POWER  K_POWER
-  #define _W      LA
-  #define _HOME   _C(LEFT)
-  #define _END    _C(RIGHT)
-  #define _EMOJI  LG(LC(SPACE))
-#else
-  #define _C      LC
-  #define _A_TAB  LALT
-  #define _G_TAB  LGUI
-  #define _REDO   _C(Y)
-  #define _POWER  C_POWER
-  #define _W      _C
-  #define _HOME   HOME
-  #define _END    END
-  #define _EMOJI  LG(DOT)
-#endif
+#define _C_Mac      LG
+#define _A_TAB_Mac  LGUI
+#define _G_TAB_Mac  LALT
+#define _REDO_Mac   _C_Mac(LS(Z))
+#define _POWER_Mac  K_POWER
+#define _W_Mac      LA
+#define _HOME_Mac   _C_Mac(LEFT)
+#define _END_Mac    _C_Mac(RIGHT)
+#define _EMOJI_Mac  LG(LC(SPACE))
+
+#define _UNDO       _C(Z)
+#define _CUT        _C(X)
+#define _COPY       _C(C)
+#define _PASTE      _C(V)
+#define _FIND       _C(F)
+#define _FIND_NEXT  _C(G)
+#define _FIND_PREV  _C(LS(G))
+// Windows/Linux Def
+#define _C      LC
+#define _A_TAB  LALT
+#define _G_TAB  LGUI
+#define _REDO   _C(Y)
+#define _POWER  C_POWER
+#define _W      _C
+#define _HOME   HOME
+#define _END    END
+#define _EMOJI  LG(DOT)
 #define _SLEEP      C_SLEEP
-#if OPERATING_SYSTEM == 'W'
-  #define _LOCK   LG(L)
-#elif OPERATING_SYSTEM == 'M'
-  #define _LOCK   _C(LC(Q))
-#elif OPERATING_SYSTEM == 'L'
-  #define _LOCK   K_LOCK
-#endif
+
 #define _UNDO       _C(Z)
 #define _CUT        _C(X)
 #define _COPY       _C(C)
@@ -3283,7 +3284,7 @@ macros {
 /* Automatically generated behavior definitions */
 / {
     behaviors {
-    
+
     };
 };
 
@@ -3295,8 +3296,18 @@ macros {
     keymap {
         compatible = "zmk,keymap";
 
-
         layer_QWERTY {
+            bindings = <
+               &kp F1                        &kp F2                        &kp F3                        &kp F4                        &kp F5                                                                                                                                                                          &kp F6                         &kp F7                         &kp F8                            &kp F9               &kp F10
+            &kp EQUAL                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5                                                                                                                                   &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0             &kp MINUS
+            &kp GRAVE                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T                                                                                                                                    &kp Y                          &kp U                          &kp I                          &kp O                             &kp P              &kp BSLH
+             &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G                                                                                                                                    &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)               &kp SQT
+            &kp LSHFT         &thumb LAYER_Button Z                         &kp X                         &kp C                         &kp V   &kp B    &thumb LAYER_System ESC               &kp LCTRL    &lower    &lower                  &kp RCTRL   &thumb LAYER_Function DELETE   &kp N                          &kp M                      &kp COMMA                        &kp DOT          &thumb LAYER_Button FSLH             &kp RSHFT
+ &magic LAYER_Magic 0                      &kp HOME                       &kp END                      &kp LEFT                     &kp RIGHT          &space LAYER_Cursor SPACE  &thumb LAYER_Mouse TAB  &kp LALT  &kp RALT  &thumb LAYER_Symbol ENTER  &thumb LAYER_Number BACKSPACE                                 &kp UP                       &kp DOWN                       &kp LBKT                          &kp RBKT  &magic LAYER_Magic 0
+            >;
+        };
+
+        layer_QWERTY_Mac {
             bindings = <
                &kp F1                        &kp F2                        &kp F3                        &kp F4                        &kp F5                                                                                                                                                                          &kp F6                         &kp F7                         &kp F8                            &kp F9               &kp F10
             &kp EQUAL                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5                                                                                                                                   &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0             &kp MINUS
@@ -3505,6 +3516,17 @@ macros {
             >;
         };
 
+        layer_Button_Mac {
+            bindings = <
+  &none               &none               &none               &none               &none                                                                                                                                       &none                &none                &none                &none   &none
+  &none               &none               &none               &none               &none        &none                                                                                                     &none                &none                &none                &none                &none   &none
+  &none               &none           &kp PSCRN             &kp ESC             &kp RET  &select_all                                                                                               &select_all              &kp RET              &kp ESC            &kp PSCRN                &none   &none
+  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD    &kp _UNDO                                                                                                 &kp _UNDO  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
+  &none           &kp _UNDO            &kp _CUT           &kp _COPY          &kp _PASTE    &kp _REDO  &tog LAYER_System             &none   &none   &none              &none  &tog LAYER_Function    &kp _REDO           &kp _PASTE            &kp _COPY             &kp _CUT            &kp _UNDO   &none
+  &none               &none               &none               &none               &none               &tog LAYER_Cursor  &tog LAYER_Mouse   &none   &none  &tog LAYER_Symbol    &tog LAYER_Number                             &none                &none                &none                &none   &none
+            >;
+        };
+
         layer_Factory {
             bindings = <
                &kp F1    &kp F2   &kp F3    &kp F4     &kp F5                                                                                  &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
@@ -3530,7 +3552,7 @@ macros {
         layer_Magic {
             bindings = <
   &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &to 0            &to 1            &to 2            &to 3            &none            &none                                                         &none   &none   &none   &none   &none           &none
+       &to 0            &to 1            &to 2            &to 3            &to 4            &none                                                         &none   &none   &none   &none   &none           &none
        &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
  &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
   &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3       &tog 19   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
