@@ -263,7 +263,7 @@
 //
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
-#if defined(LAYER_QWERTY) && LAYER_QWERTY == 0
+#if defined(LAYER_QWERTY_Mac) && LAYER_QWERTY_Mac == 0
 #define KEY_LH_C5R1 Q
 #define KEY_LH_C4R1 W
 #define KEY_LH_C3R1 E
