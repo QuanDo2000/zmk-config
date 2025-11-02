@@ -43,9 +43,10 @@
 #define LAYER_Number 17
 #define LAYER_Function 18
 #define LAYER_Button 19
-#define LAYER_Factory 20
-#define LAYER_Lower 21
-#define LAYER_Magic 22
+#define LAYER_Button_Mac 20
+#define LAYER_Factory 21
+#define LAYER_Lower 22
+#define LAYER_Magic 23
 
 /* To deal with the situation where there is no Lower layer, to keep &lower happy */
 #ifndef LAYER_Lower
@@ -290,7 +291,6 @@
 / {
 // NOTE: Use the many #define settings below to customize this keymap!
 #define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
-//#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
 #define OPERATING_SYSTEM 'W' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
@@ -349,6 +349,7 @@
 #define _PASTE_Mac  _C_Mac(V)
 #define _FIND_Mac   _C_Mac(F)
 #define _PSCRN_Mac  _C_Mac(LS(N4))
+
 //
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
@@ -2804,19 +2805,11 @@ macros {
 // NATURAL_SCROLLING reverses the directionality of the mouse scroll wheel
 // to support "natural scrolling" in macOS and other desktop environments.
 //
-//#define NATURAL_SCROLLING
 
-#ifdef NATURAL_SCROLLING
-  #define MOUSE_SCROLL_UP    SCRL_DOWN
-  #define MOUSE_SCROLL_DOWN  SCRL_UP
-  #define MOUSE_SCROLL_LEFT  SCRL_RIGHT
-  #define MOUSE_SCROLL_RIGHT SCRL_LEFT
-#else
-  #define MOUSE_SCROLL_UP    SCRL_UP
-  #define MOUSE_SCROLL_DOWN  SCRL_DOWN
-  #define MOUSE_SCROLL_LEFT  SCRL_LEFT
-  #define MOUSE_SCROLL_RIGHT SCRL_RIGHT
-#endif
+#define MOUSE_SCROLL_UP    SCRL_UP
+#define MOUSE_SCROLL_DOWN  SCRL_DOWN
+#define MOUSE_SCROLL_LEFT  SCRL_LEFT
+#define MOUSE_SCROLL_RIGHT SCRL_RIGHT
 
 //
 // MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
@@ -3008,9 +3001,6 @@ macros {
   #define SCRL_LEFT
   #define SCRL_RIGHT
 #endif
-/*HACK*//{
-
-};
 
 /* Automatically generated keymap */
 / {
@@ -3030,12 +3020,12 @@ macros {
 
         layer_QWERTY_Mac {
             bindings = <
-               &kp F1                        &kp F2                        &kp F3                        &kp F4                        &kp F5                                                                                                                                                                          &kp F6                         &kp F7                         &kp F8                            &kp F9               &kp F10
-            &kp EQUAL                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5                                                                                                                                   &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0             &kp MINUS
-            &kp GRAVE                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T                                                                                                                                    &kp Y                          &kp U                          &kp I                          &kp O                             &kp P              &kp BSLH
-             &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G                                                                                                                                    &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)               &kp SQT
-            &kp LSHFT         &thumb LAYER_Button Z                         &kp X                         &kp C                         &kp V   &kp B    &thumb LAYER_System ESC               &kp LCTRL    &lower    &lower                  &kp RCTRL   &thumb LAYER_Function DELETE   &kp N                          &kp M                      &kp COMMA                        &kp DOT          &thumb LAYER_Button FSLH             &kp RSHFT
- &magic LAYER_Magic 0                 &kp _HOME_Mac                  &kp _END_Mac                      &kp LEFT                     &kp RIGHT          &space LAYER_Cursor SPACE  &thumb LAYER_Mouse TAB  &kp LALT  &kp RALT  &thumb LAYER_Symbol ENTER  &thumb LAYER_Number BACKSPACE                                 &kp UP                       &kp DOWN                       &kp LBKT                          &kp RBKT  &magic LAYER_Magic 0
+               &kp F1                            &kp F2                            &kp F3                            &kp F4                            &kp F5                                                                                                                                                                              &kp F6                             &kp F7                             &kp F8                                &kp F9               &kp F10
+            &kp EQUAL                            &kp N1                            &kp N2                            &kp N3                            &kp N4  &kp N5                                                                                                                                   &kp N6                             &kp N7                             &kp N8                             &kp N9                                &kp N0             &kp MINUS
+            &kp GRAVE                             &kp Q                             &kp W                             &kp E                             &kp R   &kp T                                                                                                                                    &kp Y                              &kp U                              &kp I                              &kp O                                 &kp P              &kp BSLH
+             &kp CAPS  &LeftPinky (A, LAYER_QWERTY_Mac)  &LeftRingy (S, LAYER_QWERTY_Mac)  &LeftMiddy (D, LAYER_QWERTY_Mac)  &LeftIndex (F, LAYER_QWERTY_Mac)   &kp G                                                                                                                                    &kp H  &RightIndex (J, LAYER_QWERTY_Mac)  &RightMiddy (K, LAYER_QWERTY_Mac)  &RightRingy (L, LAYER_QWERTY_Mac)  &RightPinky (SEMI, LAYER_QWERTY_Mac)               &kp SQT
+            &kp LSHFT         &thumb LAYER_Button_Mac Z                             &kp X                             &kp C                             &kp V   &kp B    &thumb LAYER_System ESC               &kp LCTRL    &lower    &lower                  &kp RCTRL   &thumb LAYER_Function DELETE   &kp N                              &kp M                          &kp COMMA                            &kp DOT          &thumb LAYER_Button_Mac FSLH             &kp RSHFT
+ &magic LAYER_Magic 0                     &kp _HOME_Mac                      &kp _END_Mac                          &kp LEFT                         &kp RIGHT          &space LAYER_Cursor SPACE  &thumb LAYER_Mouse TAB  &kp LALT  &kp RALT  &thumb LAYER_Symbol ENTER  &thumb LAYER_Number BACKSPACE                                     &kp UP                           &kp DOWN                           &kp LBKT                              &kp RBKT  &magic LAYER_Magic 0
             >;
         };
 
@@ -3175,7 +3165,7 @@ macros {
             bindings = <
   &none               &none               &none               &none               &none                                                                             &none      &none      &none      &none   &none
   &none               &none               &none               &none               &none   &none                                                         &none       &none      &none      &none      &none   &none
-  &none               &none   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                         &none       &none      &none      &none      &none   &none
+  &none               &none   &tog LAYER_Typing               &to 1               &to 0   &none                                                         &none       &none      &none      &none      &none   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                      &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT   &kp CAPS   &none
   &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Number   &tog LAYER_Cursor   &none   &none   &none   &none   &none    &none   &kp DEL   &kp HOME   &kp PG_DN  &kp PG_UP    &kp END    &kp INS   &none
   &none               &none               &none               &none               &none           &none   &none   &none   &none  &kp RET  &kp BSPC                  &none      &none      &none      &none   &none
@@ -3186,7 +3176,7 @@ macros {
             bindings = <
   &none               &none               &none               &none               &none                                                                                                         &none                 &none                    &none      &none   &none
   &none               &none               &none               &none               &none   &none                                                                         &none                   &none                 &none                    &none      &none   &none
-  &none               &none   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                                         &none                   &none                 &none                    &none      &none   &none
+  &none               &none   &tog LAYER_Typing               &to 1               &to 0   &none                                                                         &none                   &none                 &none                    &none      &none   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                                &mmv MOVE_LEFT          &mmv MOVE_DOWN          &mmv MOVE_UP          &mmv MOVE_RIGHT   &mkp MB4   &none
   &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Symbol    &tog LAYER_Mouse   &none   &none   &none   &none   &none      &none  &mkp MCLK  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT   &mkp MB5   &none
   &none               &none               &none               &none               &none           &none   &none   &none   &none  &mkp RCLK  &mkp LCLK                                           &none                 &none                    &none      &none   &none
@@ -3197,7 +3187,7 @@ macros {
             bindings = <
   &none          &none       &none       &none       &none                                                                                                    &none                &none                &none                &none   &none
   &none          &none       &none       &none       &none          &none                                                                &none                &none                &none                &none                &none   &none
-  &none   &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)                                                                &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing                &none   &none
+  &none   &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)                                                                &none                &to 0                &to 1    &tog LAYER_Typing                &none   &none
   &none    &kp LS(SQT)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(EQUAL)                                                                &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
   &none  &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH)  &kp LS(FSLH)          &none   &none   &none   &none   &none   &none    &tog LAYER_Symbol     &tog LAYER_Mouse           &kp DELETE       &kp LS(DELETE)   &none
   &none          &none       &none       &none       &none                   &kp LS(N0)  &kp LS(MINUS)   &none   &none   &none   &none                        &none                &none                &none                &none   &none
@@ -3208,7 +3198,7 @@ macros {
             bindings = <
   &none      &none   &none   &none   &none                                                                                        &none                &none                &none                &none   &none
   &none      &none   &none   &none   &none      &none                                                        &none                &none                &none                &none                &none   &none
-  &none   &kp LBKT  &kp N7  &kp N8  &kp N9   &kp RBKT                                                        &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing                &none   &none
+  &none   &kp LBKT  &kp N7  &kp N8  &kp N9   &kp RBKT                                                        &none                &to 0                &to 1    &tog LAYER_Typing                &none   &none
   &none    &kp SQT  &kp N4  &kp N5  &kp N6  &kp EQUAL                                                        &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
   &none  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH  &kp FSLH      &none   &none   &none   &none   &none   &none    &tog LAYER_Number    &tog LAYER_Cursor           &kp DELETE       &kp LS(DELETE)   &none
   &none      &none   &none   &none   &none               &kp N0  &kp MINUS   &none   &none   &none   &none                        &none                &none                &none                &none   &none

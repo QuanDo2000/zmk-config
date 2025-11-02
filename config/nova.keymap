@@ -23,9 +23,9 @@
 
 
 /* Automatically generated layer name #define */
-#define LAYER_QWERTY 0
-#define LAYER_Typing 1
-#define LAYER_Gaming 2
+#define LAYER_QWERTY_Mac 0
+#define LAYER_QWERTY 1
+#define LAYER_Typing 2
 #define LAYER_LeftPinky 3
 #define LAYER_LeftRingy 4
 #define LAYER_LeftMiddy 5
@@ -37,10 +37,11 @@
 #define LAYER_System 11
 #define LAYER_Cursor 12
 #define LAYER_Mouse 13
-#define LAYER_Symbol 14
+#define LAYER_Symbol 17
 #define LAYER_Number 15
 #define LAYER_Function 16
-#define LAYER_Button 17
+#define LAYER_Button_Mac 17
+#define LAYER_Button 18
 
 #ifndef RGB_STATUS
 #define RGB_STATUS 15 0
@@ -201,15 +202,12 @@
 / {
 // NOTE: Use the many #define settings below to customize this keymap!
 #define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
-//#define NATURAL_SCROLLING  // supports "natural scrolling" in macOS
 #define OPERATING_SYSTEM 'M' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
 #define SPACE_FORGIVENESS    // allow lingering taps on the space bar
 //#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
 //#define SHIFT_FORGIVENESS  // requires v24.08-beta or newer firmware
-#define WORLD_USE_COMPOSE    // use native Compose in place of Unicode
-//#define WORLD_SHIFT_NUMBER // apply Shift to type number row digits
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -243,85 +241,25 @@
 //#define OPERATING_SYSTEM 'M' // macos
 //#define OPERATING_SYSTEM 'W' // windows
 #endif
-#if OPERATING_SYSTEM == 'M'
-  #define _C      LG
-  #define _A_TAB  LGUI
-  #define _G_TAB  LALT
-  #define _REDO   _C(LS(Z))
-  #define _POWER  K_POWER
-  #define _W      LA
-  #define _HOME   _C(LEFT)
-  #define _END    _C(RIGHT)
-  #define _EMOJI  LG(LC(SPACE))
-#else
-  #define _C      LC
-  #define _A_TAB  LALT
-  #define _G_TAB  LGUI
-  #define _REDO   _C(Y)
-  #define _POWER  C_POWER
-  #define _W      _C
-  #define _HOME   HOME
-  #define _END    END
-  #define _EMOJI  LG(DOT)
-#endif
-#define _SLEEP      C_SLEEP
-#if OPERATING_SYSTEM == 'W'
-  #define _LOCK   LG(L)
-#elif OPERATING_SYSTEM == 'M'
-  #define _LOCK   _C(LC(Q))
-#elif OPERATING_SYSTEM == 'L'
-  #define _LOCK   K_LOCK
-#endif
-#define _UNDO       _C(Z)
-#define _CUT        _C(X)
-#define _COPY       _C(C)
-#define _PASTE      _C(V)
-#define _FIND       _C(F)
-#define _FIND_NEXT  _C(G)
-#define _FIND_PREV  _C(LS(G))
-
-//
-// USE_NUMPAD_KEYCODES puts `KP_*` keycodes into the Number layer.
-//
-#ifdef USE_NUMPAD_KEYCODES
-#define _KP_N0 KP_N0
-#define _KP_N1 KP_N1
-#define _KP_N2 KP_N2
-#define _KP_N3 KP_N3
-#define _KP_N4 KP_N4
-#define _KP_N5 KP_N5
-#define _KP_N6 KP_N6
-#define _KP_N7 KP_N7
-#define _KP_N8 KP_N8
-#define _KP_N9 KP_N9
-#define _KP_PLUS KP_PLUS
-#define _KP_MINUS KP_MINUS
-#define _KP_ASTERISK KP_ASTERISK
-#define _KP_SLASH KP_SLASH
-#define _KP_COMMA KP_COMMA
-#define _KP_DOT KP_DOT
-#define _KP_EQUAL KP_EQUAL
-#define _KP_ENTER KP_ENTER
-#else
-#define _KP_N0 N0
-#define _KP_N1 N1
-#define _KP_N2 N2
-#define _KP_N3 N3
-#define _KP_N4 N4
-#define _KP_N5 N5
-#define _KP_N6 N6
-#define _KP_N7 N7
-#define _KP_N8 N8
-#define _KP_N9 N9
-#define _KP_PLUS PLUS
-#define _KP_MINUS MINUS
-#define _KP_ASTERISK ASTERISK
-#define _KP_SLASH SLASH
-#define _KP_COMMA COMMA
-#define _KP_DOT DOT
-#define _KP_EQUAL EQUAL
-#define _KP_ENTER ENTER
-#endif
+// Windows/Linux Def
+#define _C      LC
+#define _REDO   _C(Y)
+#define _UNDO   _C(Z)
+#define _CUT    _C(X)
+#define _COPY   _C(C)
+#define _PASTE  _C(V)
+#define _FIND   _C(F)
+// Mac Def
+#define _C_Mac      LG
+#define _REDO_Mac   _C_Mac(LS(Z))
+#define _HOME_Mac   _C_Mac(LEFT)
+#define _END_Mac    _C_Mac(RIGHT)
+#define _UNDO_Mac   _C_Mac(Z)
+#define _CUT_Mac    _C_Mac(X)
+#define _COPY_Mac   _C_Mac(C)
+#define _PASTE_Mac  _C_Mac(V)
+#define _FIND_Mac   _C_Mac(F)
+#define _PSCRN_Mac  _C_Mac(LS(N4))
 
 //
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
@@ -2594,20 +2532,6 @@ behaviors {
   #define RightMiddyIndex right_middy_index_bilateral RIGHT_INDEX_MOD RIGHT_INDEX_KEY
 
   //
-  // Key repetition access keys on the index fingers
-  //
-  plain: plain_typing_layer {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = PLAIN_HOLDING_TYPE;
-    tapping-term-ms = <PLAIN_HOLDING_TIME>;
-    quick-tap-ms = <PLAIN_REPEAT_DECAY>; // enable repeat
-    require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-    #binding-cells = <2>;
-    bindings = <&mo>, <&kp>;
-    retro-tap; // tap on standalone hold
-  };
-
-  //
   // Thumb cluster hold-tap keys for Miryoku layers
   //
   thumb: thumb_layer_access {
@@ -2666,54 +2590,6 @@ behaviors {
 
   //////////////////////////////////////////////////////////////////////////
   //
-  // &sk (sticky key) variant that is truly one-shot
-  //
-  //////////////////////////////////////////////////////////////////////////
-
-  //
-  // STICKY_1SHOT_DECAY defines how much time you have left (milliseconds)
-  // after tapping a sticky key before it expires (won't apply to next tap).
-  //
-  #ifndef STICKY_1SHOT_DECAY
-  #define STICKY_1SHOT_DECAY 500
-  #endif
-
-  //
-  // STICKY_HOLDING_TIME defines how long you need to hold (milliseconds)
-  // sticky one-shot keys in order to trigger their hold (not tap) action.
-  //
-  #ifndef STICKY_HOLDING_TIME
-  #define STICKY_HOLDING_TIME (TAPPING_RESOLUTION + 50)
-  #endif
-
-  sticky_key_modtap: sticky_key_modtap {
-    compatible = "zmk,behavior-hold-tap";
-    flavor = "tap-preferred";
-    tapping-term-ms = <STICKY_HOLDING_TIME>;
-    #binding-cells = <2>;
-    bindings = <&kp>, <&sticky_key_oneshot>;
-  };
-  sticky_key_oneshot: sticky_key_oneshot_macro {
-    compatible = "zmk,behavior-macro-one-param";
-    wait-ms = <0>;
-    tap-ms = <0>;
-    #binding-cells = <1>;
-    bindings
-      = <&macro_param_1to1>
-      , <&macro_tap &sticky_key_quickrel MACRO_PLACEHOLDER>
-      ;
-  };
-  sticky_key_quickrel: sticky_key_quick_release {
-    compatible = "zmk,behavior-sticky-key";
-    #binding-cells = <1>;
-    bindings = <&kp>;
-    release-after-ms = <STICKY_1SHOT_DECAY>;
-    quick-release;
-    ignore-modifiers;
-  };
-
-  //////////////////////////////////////////////////////////////////////////
-  //
   // ZMK global overrides
   //
   //////////////////////////////////////////////////////////////////////////
@@ -2734,58 +2610,6 @@ behaviors {
 };
 
 macros {
-
-  //
-  // Linux Magic System Request Key - hold this down and type REISUB
-  // - https://www.kernel.org/doc/html/latest/admin-guide/sysrq.html
-  // - https://github.com/manna-harbour/miryoku/discussions/259
-  //
-  ZMK_MACRO(linux_magic_sysrq,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings
-      = <&macro_press &mo 0 &kp RALT>
-      , <&macro_tap &kp PRINTSCREEN>
-      , <&macro_pause_for_release>
-      , <&macro_release &mo 0 &kp RALT>
-      ;
-  )
-
-  //
-  // Mod+Tab application switcher - hold this down to keep menu open
-  //
-  mod_tab: mod_tab_switcher {
-    compatible = "zmk,behavior-macro-one-param";
-    wait-ms = <0>;
-    tap-ms = <0>;
-    #binding-cells = <1>;
-    bindings
-      = <&macro_param_1to1>
-      , <&macro_press &kp MACRO_PLACEHOLDER>
-      , <&macro_tap &kp TAB>
-      , <&macro_pause_for_release>
-      , <&macro_param_1to1>
-      , <&macro_release &kp MACRO_PLACEHOLDER>
-      ;
-  };
-  mod_tab_chord: mod_tab_switcher_chord {
-    compatible = "zmk,behavior-macro-two-param";
-    wait-ms = <0>;
-    tap-ms = <0>;
-    #binding-cells = <2>;
-    bindings
-      = <&macro_param_2to1>
-      , <&macro_press &mo MACRO_PLACEHOLDER>
-      , <&macro_param_1to1>
-      , <&macro_press &mod_tab MACRO_PLACEHOLDER>
-      , <&macro_pause_for_release>
-      , <&macro_param_1to1>
-      , <&macro_release &mod_tab MACRO_PLACEHOLDER>
-      , <&macro_param_2to1>
-      , <&macro_release &mo MACRO_PLACEHOLDER>
-      ;
-  };
-
   //////////////////////////////////////////////////////////////////////////
   //
   // Approximation of Pascal Getreuer's Select Word macro from QMK
@@ -2803,92 +2627,7 @@ macros {
   #endif
 
   #define select_all kp _C(A)
-
-  ZMK_MACRO(select_none,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
-  )
-
-  //
-  // select a word (jumps to next word upon each successive invocation)
-  //
-  select_word: select_word {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&select_word_right>, <&select_word_left>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ZMK_MACRO(select_word_right,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(RIGHT) &kp _W(LEFT) &kp _W(LS(RIGHT))>;
-  )
-  ZMK_MACRO(select_word_left,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(LEFT) &kp _W(RIGHT) &kp _W(LS(LEFT))>;
-  )
-
-  //
-  // extend current selection by one word
-  //
-  extend_word: extend_word {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&extend_word_right>, <&extend_word_left>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ZMK_MACRO(extend_word_right,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(LS(RIGHT))>;
-  )
-  ZMK_MACRO(extend_word_left,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _W(LS(LEFT))>;
-  )
-
-  //
-  // select current line
-  //
-  select_line: select_line {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&select_line_right>, <&select_line_left>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ZMK_MACRO(select_line_right,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _HOME &kp LS(_END)>;
-  )
-  ZMK_MACRO(select_line_left,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp _END &kp LS(_HOME)>;
-  )
-
-  //
-  // extend current selection by one line
-  //
-  extend_line: extend_line {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&extend_line_right>, <&extend_line_left>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-  };
-  ZMK_MACRO(extend_line_right,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp LS(DOWN) &kp LS(_END)>;
-  )
-  ZMK_MACRO(extend_line_left,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp LS(UP) &kp LS(_HOME)>;
-  )
+  #define select_all_mac kp _C_Mac(A)
 };
 /*HACK*/};
 
@@ -2920,17 +2659,10 @@ macros {
 //
 //#define NATURAL_SCROLLING
 
-#ifdef NATURAL_SCROLLING
-  #define MOUSE_SCROLL_UP    SCRL_DOWN
-  #define MOUSE_SCROLL_DOWN  SCRL_UP
-  #define MOUSE_SCROLL_LEFT  SCRL_RIGHT
-  #define MOUSE_SCROLL_RIGHT SCRL_LEFT
-#else
-  #define MOUSE_SCROLL_UP    SCRL_UP
-  #define MOUSE_SCROLL_DOWN  SCRL_DOWN
-  #define MOUSE_SCROLL_LEFT  SCRL_LEFT
-  #define MOUSE_SCROLL_RIGHT SCRL_RIGHT
-#endif
+#define MOUSE_SCROLL_UP    SCRL_UP
+#define MOUSE_SCROLL_DOWN  SCRL_DOWN
+#define MOUSE_SCROLL_LEFT  SCRL_LEFT
+#define MOUSE_SCROLL_RIGHT SCRL_RIGHT
 
 //
 // MOUSE_MOTION_DELAY defines how long to wait (milliseconds) before starting
@@ -3122,32 +2854,21 @@ macros {
   #define SCRL_LEFT
   #define SCRL_RIGHT
 #endif
-/*HACK*//{
-
-};
-
-/* Automatically generated macro definitions */
-/ {
-    macros {
-
-    };
-};
-
-/* Automatically generated behavior definitions */
-/ {
-    behaviors {
-    
-    };
-};
-
-/* Automatically generated combos definitions */
-
 
 /* Automatically generated keymap */
 / {
     keymap {
         compatible = "zmk,keymap";
 
+
+        layer_QWERTY_Mac {
+            bindings = <
+                            &kp Q                             &kp W                             &kp E                             &kp R                   &kp T                      &kp Y                              &kp U                              &kp I                              &kp O                                 &kp P
+ &LeftPinky (A, LAYER_QWERTY_Mac)  &LeftRingy (S, LAYER_QWERTY_Mac)  &LeftMiddy (D, LAYER_QWERTY_Mac)  &LeftIndex (F, LAYER_QWERTY_Mac)                   &kp G                      &kp H  &RightIndex (J, LAYER_QWERTY_Mac)  &RightMiddy (K, LAYER_QWERTY_Mac)  &RightRingy (L, LAYER_QWERTY_Mac)  &RightPinky (SEMI, LAYER_QWERTY_Mac)
+        &thumb LAYER_Button_Mac Z                             &kp X                             &kp C                             &kp V                   &kp B                      &kp N                              &kp M                          &kp COMMA                            &kp DOT          &thumb LAYER_Button_Mac FSLH
+                                                                              &thumb LAYER_System ESC         &space LAYER_Cursor SPACE  &thumb LAYER_Mouse TAB  &thumb LAYER_Symbol ENTER      &thumb LAYER_Number BACKSPACE       &thumb LAYER_Function DELETE
+            >;
+        };
 
         layer_QWERTY {
             bindings = <
@@ -3164,15 +2885,6 @@ macros {
  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY         &trans         &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY
     &kp KEY_LH_C5R3              &trans              &trans              &trans         &trans         &trans               &trans               &trans               &trans      &kp KEY_RH_C5R3
                                               &kp KEY_LH_T1       &kp KEY_LH_T2  &kp KEY_LH_T3  &kp KEY_RH_T3               &trans        &kp KEY_RH_T1
-            >;
-        };
-
-        layer_Gaming {
-            bindings = <
-   &kp TAB  &kp Q     &kp W      &kp E     &kp R              &kp Y     &kp U      &kp I    &kp O     &kp P
- &kp LSHFT  &kp A     &kp S      &kp D     &kp F              &kp H     &kp J      &kp K    &kp L  &kp SEMI
- &kp LCTRL  &kp Z     &kp X      &kp C     &kp V              &kp N     &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                    &kp ESC  &kp SPACE  &kp LALT  &tog LAYER_Gaming  &kp BSPC    &kp DEL
             >;
         };
 
@@ -3250,7 +2962,7 @@ macros {
 
         layer_System {
             bindings = <
-        &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0  &studio_unlock  &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG
+        &bootloader   &tog LAYER_Typing                &to 1               &to 0  &studio_unlock  &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG
  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD           &none   &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed
      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System           &none   &bt BT_CLR         &bt_0            &bt_1            &bt_2            &bt_3
                                                        &none               &none           &none   &kp C_STOP      &kp C_PP       &kp C_MUTE
@@ -3259,7 +2971,7 @@ macros {
 
         layer_Cursor {
             bindings = <
-        &bootloader   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0  &none  &kp _REDO  &kp _PASTE  &kp _COPY   &kp _CUT  &kp _UNDO
+              &none   &tog LAYER_Typing               &to 1               &to 0  &none      &none       &none      &none      &none      &none
  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD  &none   &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT   &kp CAPS
      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Number   &tog LAYER_Cursor  &none   &kp HOME   &kp PG_DN  &kp PG_UP    &kp END    &kp INS
                                                       &none               &none  &none    &kp RET    &kp BSPC    &kp DEL
@@ -3268,7 +2980,7 @@ macros {
 
         layer_Mouse {
             bindings = <
-        &bootloader   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0  &none               &kp _REDO              &kp _PASTE             &kp _COPY                 &kp _CUT  &kp _UNDO
+              &none   &tog LAYER_Typing               &to 1               &to 0  &none                   &none                   &none                 &none                    &none      &none
  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD  &none          &mmv MOVE_LEFT          &mmv MOVE_DOWN          &mmv MOVE_UP          &mmv MOVE_RIGHT   &mkp MB4
      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Symbol    &tog LAYER_Mouse  &none  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT   &mkp MB5
                                                       &none               &none  &none               &mkp RCLK               &mkp LCLK             &mkp MCLK
@@ -3277,7 +2989,7 @@ macros {
 
         layer_Symbol {
             bindings = <
-  &kp LS(LBKT)  &kp LS(N7)    &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)  &none                &to 0    &tog LAYER_Gaming    &tog LAYER_Typing          &bootloader
+  &kp LS(LBKT)  &kp LS(N7)    &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)  &none                &to 0                &to 1    &tog LAYER_Typing                &none
    &kp LS(SQT)  &kp LS(N4)    &kp LS(N5)  &kp LS(N6)  &kp LS(EQUAL)  &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD
  &kp LS(GRAVE)  &kp LS(N1)    &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH)  &none    &tog LAYER_Symbol     &tog LAYER_Mouse           &kp DELETE       &kp LS(DELETE)
                             &kp LS(FSLH)  &kp LS(N0)  &kp LS(MINUS)  &none                &none                &none
@@ -3286,7 +2998,7 @@ macros {
 
         layer_Number {
             bindings = <
-  &kp LBKT  &kp N7    &kp N8  &kp N9   &kp RBKT  &none                &to 0    &tog LAYER_Gaming    &tog LAYER_Typing          &bootloader
+  &kp LBKT  &kp N7    &kp N8  &kp N9   &kp RBKT  &none                &to 0                &to 1    &tog LAYER_Typing                &none
    &kp SQT  &kp N4    &kp N5  &kp N6  &kp EQUAL  &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD
  &kp GRAVE  &kp N1    &kp N2  &kp N3   &kp BSLH  &none    &tog LAYER_Number    &tog LAYER_Cursor           &kp DELETE       &kp LS(DELETE)
                     &kp FSLH  &kp N0  &kp MINUS  &none                &none                &none
@@ -3295,10 +3007,19 @@ macros {
 
         layer_Function {
             bindings = <
- &kp F12  &kp F7     &kp F8     &kp F9        &kp PSCRN  &studio_unlock                &to 0    &tog LAYER_Gaming    &tog LAYER_Typing          &bootloader
+ &kp F12  &kp F7     &kp F8     &kp F9        &kp PSCRN  &studio_unlock                &to 0                &to 1    &tog LAYER_Typing          &bootloader
  &kp F11  &kp F4     &kp F5     &kp F6         &kp SLCK           &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD
  &kp F10  &kp F1     &kp F2     &kp F3  &kp PAUSE_BREAK           &none  &tog LAYER_Function    &tog LAYER_System           &kp DELETE       &kp LS(DELETE)
                   &kp K_APP  &kp SPACE          &kp TAB           &none                &none                &none
+            >;
+        };
+
+        layer_Button_Mac {
+            bindings = <
+              &none      &kp _PSCRN_Mac       &kp _FIND_Mac             &kp RET   &select_all_mac    &select_all_mac              &kp RET        &kp _FIND_Mac       &kp _PSCRN_Mac                &none
+ &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD     &kp _UNDO_Mac      &kp _UNDO_Mac  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD
+      &kp _UNDO_Mac        &kp _CUT_Mac       &kp _COPY_Mac      &kp _PASTE_Mac     &kp _REDO_Mac      &kp _REDO_Mac       &kp _PASTE_Mac        &kp _COPY_Mac         &kp _CUT_Mac        &kp _UNDO_Mac
+                                          &tog LAYER_System   &tog LAYER_Cursor  &tog LAYER_Mouse  &tog LAYER_Symbol    &tog LAYER_Number  &tog LAYER_Function
             >;
         };
 
