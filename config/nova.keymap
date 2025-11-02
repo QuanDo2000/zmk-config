@@ -37,7 +37,7 @@
 #define LAYER_System 11
 #define LAYER_Cursor 12
 #define LAYER_Mouse 13
-#define LAYER_Symbol 17
+#define LAYER_Symbol 14
 #define LAYER_Number 15
 #define LAYER_Function 16
 #define LAYER_Button_Mac 17
