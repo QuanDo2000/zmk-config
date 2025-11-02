@@ -330,86 +330,25 @@
 //#define OPERATING_SYSTEM 'M' // macos
 //#define OPERATING_SYSTEM 'W' // windows
 #endif
-#define _C_Mac      LG
-#define _A_TAB_Mac  LGUI
-#define _G_TAB_Mac  LALT
-#define _REDO_Mac   _C_Mac(LS(Z))
-#define _POWER_Mac  K_POWER
-#define _W_Mac      LA
-#define _HOME_Mac   _C_Mac(LEFT)
-#define _END_Mac    _C_Mac(RIGHT)
-#define _EMOJI_Mac  LG(LC(SPACE))
-
-#define _UNDO_Mac       _C_Mac(Z)
-#define _CUT_Mac        _C_Mac(X)
-#define _COPY_Mac       _C_Mac(C)
-#define _PASTE_Mac      _C_Mac(V)
-#define _FIND_Mac       _C_Mac(F)
-#define _FIND_NEXT_Mac  _C_Mac(G)
-#define _FIND_PREV_Mac  _C_Mac(LS(G))
 // Windows/Linux Def
 #define _C      LC
-#define _A_TAB  LALT
-#define _G_TAB  LGUI
 #define _REDO   _C(Y)
-#define _POWER  C_POWER
-#define _W      _C
-#define _HOME   HOME
-#define _END    END
-#define _EMOJI  LG(DOT)
-#define _SLEEP      C_SLEEP
-
-#define _UNDO       _C(Z)
-#define _CUT        _C(X)
-#define _COPY       _C(C)
-#define _PASTE      _C(V)
-#define _FIND       _C(F)
-#define _FIND_NEXT  _C(G)
-#define _FIND_PREV  _C(LS(G))
-
-//
-// USE_NUMPAD_KEYCODES puts `KP_*` keycodes into the Number layer.
-//
-#ifdef USE_NUMPAD_KEYCODES
-#define _KP_N0 KP_N0
-#define _KP_N1 KP_N1
-#define _KP_N2 KP_N2
-#define _KP_N3 KP_N3
-#define _KP_N4 KP_N4
-#define _KP_N5 KP_N5
-#define _KP_N6 KP_N6
-#define _KP_N7 KP_N7
-#define _KP_N8 KP_N8
-#define _KP_N9 KP_N9
-#define _KP_PLUS KP_PLUS
-#define _KP_MINUS KP_MINUS
-#define _KP_ASTERISK KP_ASTERISK
-#define _KP_SLASH KP_SLASH
-#define _KP_COMMA KP_COMMA
-#define _KP_DOT KP_DOT
-#define _KP_EQUAL KP_EQUAL
-#define _KP_ENTER KP_ENTER
-#else
-#define _KP_N0 N0
-#define _KP_N1 N1
-#define _KP_N2 N2
-#define _KP_N3 N3
-#define _KP_N4 N4
-#define _KP_N5 N5
-#define _KP_N6 N6
-#define _KP_N7 N7
-#define _KP_N8 N8
-#define _KP_N9 N9
-#define _KP_PLUS PLUS
-#define _KP_MINUS MINUS
-#define _KP_ASTERISK ASTERISK
-#define _KP_SLASH SLASH
-#define _KP_COMMA COMMA
-#define _KP_DOT DOT
-#define _KP_EQUAL EQUAL
-#define _KP_ENTER ENTER
-#endif
-
+#define _UNDO   _C(Z)
+#define _CUT    _C(X)
+#define _COPY   _C(C)
+#define _PASTE  _C(V)
+#define _FIND   _C(F)
+// Mac Def
+#define _C_Mac      LG
+#define _REDO_Mac   _C_Mac(LS(Z))
+#define _HOME_Mac   _C_Mac(LEFT)
+#define _END_Mac    _C_Mac(RIGHT)
+#define _UNDO_Mac   _C_Mac(Z)
+#define _CUT_Mac    _C_Mac(X)
+#define _COPY_Mac   _C_Mac(C)
+#define _PASTE_Mac  _C_Mac(V)
+#define _FIND_Mac   _C_Mac(F)
+#define _PSCRN_Mac  _C_Mac(LS(N4))
 //
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
@@ -2836,12 +2775,6 @@ macros {
 
   #define select_all kp _C(A)
   #define select_all_mac kp _C_Mac(A)
-
-  ZMK_MACRO(select_none,
-    wait-ms = <SELECT_WORD_DELAY>;
-    tap-ms = <SELECT_WORD_DELAY>;
-    bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
-  )
 };
 /*HACK*/};
 
@@ -3102,7 +3035,7 @@ macros {
             &kp GRAVE                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T                                                                                                                                    &kp Y                          &kp U                          &kp I                          &kp O                             &kp P              &kp BSLH
              &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G                                                                                                                                    &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)               &kp SQT
             &kp LSHFT         &thumb LAYER_Button Z                         &kp X                         &kp C                         &kp V   &kp B    &thumb LAYER_System ESC               &kp LCTRL    &lower    &lower                  &kp RCTRL   &thumb LAYER_Function DELETE   &kp N                          &kp M                      &kp COMMA                        &kp DOT          &thumb LAYER_Button FSLH             &kp RSHFT
- &magic LAYER_Magic 0                      &kp HOME                       &kp END                      &kp LEFT                     &kp RIGHT          &space LAYER_Cursor SPACE  &thumb LAYER_Mouse TAB  &kp LALT  &kp RALT  &thumb LAYER_Symbol ENTER  &thumb LAYER_Number BACKSPACE                                 &kp UP                       &kp DOWN                       &kp LBKT                          &kp RBKT  &magic LAYER_Magic 0
+ &magic LAYER_Magic 0                 &kp _HOME_Mac                  &kp _END_Mac                      &kp LEFT                     &kp RIGHT          &space LAYER_Cursor SPACE  &thumb LAYER_Mouse TAB  &kp LALT  &kp RALT  &thumb LAYER_Symbol ENTER  &thumb LAYER_Number BACKSPACE                                 &kp UP                       &kp DOWN                       &kp LBKT                          &kp RBKT  &magic LAYER_Magic 0
             >;
         };
 
@@ -3229,12 +3162,12 @@ macros {
 
         layer_System {
             bindings = <
-  &none               &none               &none                &none               &none                                                                                      &none            &none            &none            &none   &none
-  &none               &none               &none                &none               &none   &none                                                                &none         &none            &none            &none            &none   &none
-  &none         &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0   &studio_unlock                                                 &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
-  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                           &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed   &none
-  &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none   &none   &none   &none   &none       &none  &kp C_MUTE   &bt BT_CLR         &bt_0            &bt_1            &bt_2     &out OUT_TOG   &none
-  &none               &none               &none                &none               &none           &none   &none   &none   &none  &kp C_STOP    &kp C_PP                      &none            &none            &none            &none   &none
+  &none               &none               &none                &none               &none                                                                                              &none            &none            &none            &none   &none
+  &none               &none               &none                &none               &none   &none                                                                        &none         &none            &none            &none            &none   &none
+  &none         &bootloader   &tog LAYER_Typing    &tog LAYER_Gaming               &to 0   &studio_unlock                                                         &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
+  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                                   &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed   &none
+  &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none           &none   &none   &none   &none       &none  &kp C_MUTE   &bt BT_CLR         &bt_0            &bt_1            &bt_2     &out OUT_TOG   &none
+  &none               &none               &none                &none               &none                   &none   &none   &none   &none  &kp C_STOP    &kp C_PP                      &none            &none            &none            &none   &none
             >;
         };
 
@@ -3242,7 +3175,7 @@ macros {
             bindings = <
   &none               &none               &none               &none               &none                                                                             &none      &none      &none      &none   &none
   &none               &none               &none               &none               &none   &none                                                         &none       &none      &none      &none      &none   &none
-  &none         &bootloader   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                     &kp _REDO  &kp _PASTE  &kp _COPY   &kp _CUT  &kp _UNDO   &none
+  &none               &none   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                         &none       &none      &none      &none      &none   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                      &kp LEFT    &kp DOWN     &kp UP  &kp RIGHT   &kp CAPS   &none
   &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Number   &tog LAYER_Cursor   &none   &none   &none   &none   &none    &none   &kp DEL   &kp HOME   &kp PG_DN  &kp PG_UP    &kp END    &kp INS   &none
   &none               &none               &none               &none               &none           &none   &none   &none   &none  &kp RET  &kp BSPC                  &none      &none      &none      &none   &none
@@ -3253,7 +3186,7 @@ macros {
             bindings = <
   &none               &none               &none               &none               &none                                                                                                         &none                 &none                    &none      &none   &none
   &none               &none               &none               &none               &none   &none                                                                         &none                   &none                 &none                    &none      &none   &none
-  &none         &bootloader   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                                     &kp _REDO              &kp _PASTE             &kp _COPY                 &kp _CUT  &kp _UNDO   &none
+  &none               &none   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                                         &none                   &none                 &none                    &none      &none   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                                &mmv MOVE_LEFT          &mmv MOVE_DOWN          &mmv MOVE_UP          &mmv MOVE_RIGHT   &mkp MB4   &none
   &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Symbol    &tog LAYER_Mouse   &none   &none   &none   &none   &none      &none  &mkp MCLK  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT   &mkp MB5   &none
   &none               &none               &none               &none               &none           &none   &none   &none   &none  &mkp RCLK  &mkp LCLK                                           &none                 &none                    &none      &none   &none
@@ -3264,7 +3197,7 @@ macros {
             bindings = <
   &none          &none       &none       &none       &none                                                                                                    &none                &none                &none                &none   &none
   &none          &none       &none       &none       &none          &none                                                                &none                &none                &none                &none                &none   &none
-  &none   &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)                                                                &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing          &bootloader   &none
+  &none   &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)                                                                &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing                &none   &none
   &none    &kp LS(SQT)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(EQUAL)                                                                &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
   &none  &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH)  &kp LS(FSLH)          &none   &none   &none   &none   &none   &none    &tog LAYER_Symbol     &tog LAYER_Mouse           &kp DELETE       &kp LS(DELETE)   &none
   &none          &none       &none       &none       &none                   &kp LS(N0)  &kp LS(MINUS)   &none   &none   &none   &none                        &none                &none                &none                &none   &none
@@ -3275,7 +3208,7 @@ macros {
             bindings = <
   &none      &none   &none   &none   &none                                                                                        &none                &none                &none                &none   &none
   &none      &none   &none   &none   &none      &none                                                        &none                &none                &none                &none                &none   &none
-  &none   &kp LBKT  &kp N7  &kp N8  &kp N9   &kp RBKT                                                        &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing          &bootloader   &none
+  &none   &kp LBKT  &kp N7  &kp N8  &kp N9   &kp RBKT                                                        &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing                &none   &none
   &none    &kp SQT  &kp N4  &kp N5  &kp N6  &kp EQUAL                                                        &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
   &none  &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp BSLH  &kp FSLH      &none   &none   &none   &none   &none   &none    &tog LAYER_Number    &tog LAYER_Cursor           &kp DELETE       &kp LS(DELETE)   &none
   &none      &none   &none   &none   &none               &kp N0  &kp MINUS   &none   &none   &none   &none                        &none                &none                &none                &none   &none
@@ -3297,7 +3230,7 @@ macros {
             bindings = <
   &none               &none               &none               &none               &none                                                                                                                                       &none                &none                &none                &none   &none
   &none               &none               &none               &none               &none        &none                                                                                                     &none                &none                &none                &none                &none   &none
-  &none               &none           &kp PSCRN             &kp ESC             &kp RET  &select_all                                                                                               &select_all              &kp RET              &kp ESC            &kp PSCRN                &none   &none
+  &none               &none           &kp PSCRN           &kp _FIND             &kp RET  &select_all                                                                                               &select_all              &kp RET            &kp _FIND            &kp PSCRN                &none   &none
   &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD    &kp _UNDO                                                                                                 &kp _UNDO  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
   &none           &kp _UNDO            &kp _CUT           &kp _COPY          &kp _PASTE    &kp _REDO  &tog LAYER_System             &none   &none   &none              &none  &tog LAYER_Function    &kp _REDO           &kp _PASTE            &kp _COPY             &kp _CUT            &kp _UNDO   &none
   &none               &none               &none               &none               &none               &tog LAYER_Cursor  &tog LAYER_Mouse   &none   &none  &tog LAYER_Symbol    &tog LAYER_Number                             &none                &none                &none                &none   &none
@@ -3306,12 +3239,12 @@ macros {
 
         layer_Button_Mac {
             bindings = <
-  &none               &none               &none               &none               &none                                                                                                                                                   &none                &none                &none                &none   &none
-  &none               &none               &none               &none               &none            &none                                                                                                             &none                &none                &none                &none                &none   &none
-  &none               &none           &kp PSCRN             &kp ESC             &kp RET  &select_all_mac                                                                                                   &select_all_mac              &kp RET              &kp ESC            &kp PSCRN                &none   &none
-  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD        &kp _UNDO                                                                                                         &kp _UNDO  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none           &kp _UNDO            &kp _CUT           &kp _COPY          &kp _PASTE        &kp _REDO_Mac  &tog LAYER_System             &none   &none   &none              &none  &tog LAYER_Function    &kp _REDO_Mac           &kp _PASTE            &kp _COPY             &kp _CUT            &kp _UNDO   &none
-  &none               &none               &none               &none               &none                       &tog LAYER_Cursor  &tog LAYER_Mouse   &none   &none  &tog LAYER_Symbol    &tog LAYER_Number                                 &none                &none                &none                &none   &none
+  &none               &none               &none               &none               &none                                                                                                                                               &none                &none                &none                &none   &none
+  &none               &none               &none               &none               &none            &none                                                                                                         &none                &none                &none                &none                &none   &none
+  &none               &none      &kp _PSCRN_Mac       &kp _FIND_Mac             &kp RET  &select_all_mac                                                                                               &select_all_mac              &kp RET        &kp _FIND_Mac       &kp _PSCRN_Mac                &none   &none
+  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD    &kp _UNDO_Mac                                                                                                 &kp _UNDO_Mac  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
+  &none       &kp _UNDO_Mac        &kp _CUT_Mac       &kp _COPY_Mac      &kp _PASTE_Mac    &kp _REDO_Mac  &tog LAYER_System             &none   &none   &none              &none  &tog LAYER_Function    &kp _REDO_Mac       &kp _PASTE_Mac        &kp _COPY_Mac         &kp _CUT_Mac        &kp _UNDO_Mac   &none
+  &none               &none               &none               &none               &none                   &tog LAYER_Cursor  &tog LAYER_Mouse   &none   &none  &tog LAYER_Symbol    &tog LAYER_Number                                 &none                &none                &none                &none   &none
             >;
         };
 
