@@ -200,13 +200,9 @@
 /* Custom Defined Behaviors */
 / {
 // NOTE: Use the many #define settings below to customize this keymap!
-#define ENABLE_MOUSE_KEYS  // requires v24.12-beta or newer firmware
-#define OPERATING_SYSTEM 'M' // choose 'L'inux, 'M'acOS, or 'W'indows
 #define DIFFICULTY_LEVEL  0  // 0:custom, 1:easy -> 5:hard (see below)
 #define ENFORCE_BILATERAL    // cancels single-handed home row mod+tap
 #define SPACE_FORGIVENESS    // allow lingering taps on the space bar
-//#define THUMB_FORGIVENESS  // allow lingering taps on the thumb keys
-//#define SHIFT_FORGIVENESS  // requires v24.08-beta or newer firmware
 // TIP: Add more setting overrides here instead of editing them below.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -235,11 +231,6 @@
 // Specifically, Windows users should be running the WinCompose tool,
 // which lets you type Unicode characters via hexadecimal codepoints.
 //
-#ifndef OPERATING_SYSTEM
-#define OPERATING_SYSTEM 'L' // linux
-//#define OPERATING_SYSTEM 'M' // macos
-//#define OPERATING_SYSTEM 'W' // windows
-#endif
 // Windows/Linux Def
 #define _C      LC
 #define _REDO   _C(Y)
@@ -263,7 +254,6 @@
 //
 // Keymap specific knowledge of the base layer's alpha + ZMK layout
 //
-#if defined(LAYER_QWERTY_Mac) && LAYER_QWERTY_Mac == 0
 #define KEY_LH_C5R1 Q
 #define KEY_LH_C4R1 W
 #define KEY_LH_C3R1 E
@@ -300,7 +290,6 @@
 #define KEY_RH_T3 ENTER
 #define KEY_RH_T2 BACKSPACE
 #define KEY_RH_T1 DELETE
-#endif
 
 combos {
   compatible = "zmk,combos";
@@ -375,51 +364,6 @@ behaviors {
   // the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
   //
   //#define ENFORCE_BILATERAL
-
-  //
-  // SHIFT_FORGIVENESS taps when home row shift is merely held and released,
-  // without any other key having been tapped while the shift was held down.
-  // For example, suppose you hold a home row shift key and, before pressing
-  // another key, you suddenly decide that you don't want the shift anymore:
-  //
-  // <1> If this setting is enabled, the underlying tap behavior is triggered
-  //     to type a single character when you release that home row shift key.
-  //
-  // <2> Otherwise, nothing happens when you release that home row shift key.
-  //
-  // This requires the "hold-while-undecided" ZMK feature in a beta firmware:
-  // please select "v24.08-beta1" or newer from the drop-down menu located at
-  // Glove80 Layout Editor > Settings > Advanced Settings > Firmware Version.
-  //
-  // CAUTION: This can interfere with mod-click mouse usage where you hold a
-  // home row shift key and perform mouse actions (move, click, drag & drop):
-  // when you release that home row shift key, its underlying character would
-  // be typed, potentially triggering an unexpected action on your selection!
-  // To prevent the underlying character from being typed, press another key
-  // (such as a dedicated shift key, a neighboring home row mod key, or even
-  // a layer access key) before you release the original home row shift key.
-  //
-  // NOTE: You may potentially encounter "flashing mods" where an application
-  // or operating system action is triggered by a standalone tap of a shift,
-  // but this is unlikely as people regularly tap shift without consequence.
-  //
-  //#define SHIFT_FORGIVENESS
-
-  //
-  // THUMB_FORGIVENESS taps when a thumb layer access key is merely held and
-  // released, without any other key having been tapped while thumb was held.
-  // For example, suppose you hold the cursor layer key and, before pressing
-  // another key, you suddenly decide that you don't want the layer anymore:
-  //
-  // <1> If this setting is enabled, the underlying tap behavior is triggered
-  //     to type a single character when you release that layer access key.
-  //
-  // <2> Otherwise, nothing happens when you release that layer access key.
-  //
-  // NOTE: This setting interferes with (and effectively disables) per-key
-  // RGB indicators (PR30) for layers accessed via thumb layer access keys.
-  //
-  //#define THUMB_FORGIVENESS
 
   //
   // SPACE_FORGIVENESS taps when the symbol layer access key is merely held
@@ -934,12 +878,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_pinky_bilateral: homey_left_pinky_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -951,12 +889,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_PINKY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&left_pinky_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_PINKY_MOD == LSFT || LEFT_PINKY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_pinky_hold: homey_left_pinky_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -1031,12 +963,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_pinky_bilateral: homey_right_pinky_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -1048,12 +974,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_PINKY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&right_pinky_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_PINKY_MOD == LSFT || RIGHT_PINKY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_pinky_hold: homey_right_pinky_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -1128,12 +1048,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_RINGY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_RINGY_MOD == LSFT || LEFT_RINGY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_ringy_bilateral: homey_left_ringy_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -1145,12 +1059,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_RINGY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&left_ringy_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_RINGY_MOD == LSFT || LEFT_RINGY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_ringy_hold: homey_left_ringy_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -1225,12 +1133,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_RINGY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_RINGY_MOD == LSFT || RIGHT_RINGY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_ringy_bilateral: homey_right_ringy_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -1242,12 +1144,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_RINGY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&right_ringy_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_RINGY_MOD == LSFT || RIGHT_RINGY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_ringy_hold: homey_right_ringy_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -1322,12 +1218,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_middy_bilateral: homey_left_middy_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -1339,12 +1229,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_MIDDY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&left_middy_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_MIDDY_MOD == LSFT || LEFT_MIDDY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_middy_hold: homey_left_middy_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -1419,12 +1303,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_middy_bilateral: homey_right_middy_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -1436,12 +1314,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_MIDDY_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&right_middy_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_MIDDY_MOD == LSFT || RIGHT_MIDDY_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_middy_hold: homey_right_middy_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -1516,12 +1388,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_index_bilateral: homey_left_index_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -1533,12 +1399,6 @@ behaviors {
     require-prior-idle-ms = <LEFT_INDEX_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&left_index_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if LEFT_INDEX_MOD == LSFT || LEFT_INDEX_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   left_index_hold: homey_left_index_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -1613,12 +1473,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&kp>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_index_bilateral: homey_right_index_bilateral {
     compatible = "zmk,behavior-hold-tap";
@@ -1630,12 +1484,6 @@ behaviors {
     require-prior-idle-ms = <RIGHT_INDEX_STREAK_DECAY>;
     #binding-cells = <2>;
     bindings = <&right_index_hold>, <&kp>;
-    #ifdef SHIFT_FORGIVENESS
-    #if RIGHT_INDEX_MOD == LSFT || RIGHT_INDEX_MOD == RSFT
-    hold-while-undecided; // requires 24.08-beta1 or newer firmware
-    retro-tap; // tap on standalone hold
-    #endif
-    #endif
   };
   right_index_hold: homey_right_index_hold {
     compatible = "zmk,behavior-macro-one-param";
@@ -2608,22 +2456,6 @@ behaviors {
 };
 
 macros {
-  //////////////////////////////////////////////////////////////////////////
-  //
-  // Approximation of Pascal Getreuer's Select Word macro from QMK
-  // - https://getreuer.info/posts/keyboards/select-word/index.html
-  //
-  //////////////////////////////////////////////////////////////////////////
-
-  //
-  // SELECT_WORD_DELAY defines how long the macro waits (milliseconds)
-  // after moving the cursor before it selects a word.  A larger delay
-  // may allow the macro to move to the next word upon each invocation.
-  //
-  #ifndef SELECT_WORD_DELAY
-  #define SELECT_WORD_DELAY 1
-  #endif
-
   #define select_all kp _C(A)
   #define select_all_mac kp _C_Mac(A)
 };
@@ -2730,128 +2562,39 @@ macros {
 #define MOUSE_SCROLL_MAXIMUM_SPEED 10
 #endif
 
-//
-// MOUSE_SCALER_SLOW sets parameters for the &zip_xy_scaler input processor:
-// https://zmk.dev/docs/keymaps/input-processors/scaler
-//
-#ifndef MOUSE_SCALER_SLOW
-#define MOUSE_SCALER_SLOW 1 4
-#endif
-
-//
-// MOUSE_SCALER_FAST sets parameters for the &zip_xy_scaler input processor:
-// https://zmk.dev/docs/keymaps/input-processors/scaler
-//
-#ifndef MOUSE_SCALER_FAST
-#define MOUSE_SCALER_FAST 4 1
-#endif
-
-//
-// MOUSE_SCALER_WARP sets parameters for the &zip_xy_scaler input processor:
-// https://zmk.dev/docs/keymaps/input-processors/scaler
-//
-#ifndef MOUSE_SCALER_WARP
-#define MOUSE_SCALER_WARP 12 1
-#endif
 /*HACK*/};
-#ifdef ENABLE_MOUSE_KEYS
-  // ==== MOUSE-KEY <section begins> ====
-  #define ZMK_POINTING_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
-  #define ZMK_POINTING_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
-  #include <dt-bindings/zmk/pointing.h>
-  &mmv {
-    delay-ms = <MOUSE_MOTION_DELAY>;
-    acceleration-exponent = <MOUSE_MOTION_ACCELERATION_EXPONENT>;
-    time-to-max-speed-ms = <MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED>;
-  };
-  &msc {
-    delay-ms = <MOUSE_SCROLL_DELAY>;
-    acceleration-exponent = <MOUSE_SCROLL_ACCELERATION_EXPONENT>;
-    time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
-  };
-  //
-  // Scaling for mouse movement, based on @caksoylar's example:
-  // https://github.com/caksoylar/zmk-config/commit/0020c23c544cd7111013f0114609d1fb90e0e475
-  //
-  #include <input/processors.dtsi>
-  &mmv_input_listener {
-    #ifdef LAYER_MouseSlow
-    slow {
-      layers = <LAYER_MouseSlow>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_SLOW>;
-    };
-    #endif
-    #ifdef LAYER_MouseFast
-    fast {
-      layers = <LAYER_MouseFast>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_FAST>;
-    };
-    #endif
-    #ifdef LAYER_MouseWarp
-    warp {
-      layers = <LAYER_MouseWarp>;
-      input-processors = <&zip_xy_scaler MOUSE_SCALER_WARP>;
-    };
-    #endif
-  };
-  //
-  // Scaling for mouse scrolling, based on @caksoylar's example:
-  // https://github.com/caksoylar/zmk-config/commit/e35ee2f08788927683df7bbdd7fc73434473886e
-  //
-  #include <zephyr/dt-bindings/input/input-event-codes.h>
-  / {
-    input_processors {
-      zip_scroll_scaler: zip_scroll_scaler {
-        compatible = "zmk,input-processor-scaler";
-        #input-processor-cells = <2>;
-        type = <INPUT_EV_REL>;
-        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
-        track-remainders;
-      };
+
+// ==== MOUSE-KEY <section begins> ====
+#define ZMK_POINTING_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
+#define ZMK_POINTING_DEFAULT_SCRL_VAL MOUSE_SCROLL_MAXIMUM_SPEED
+#include <dt-bindings/zmk/pointing.h>
+&mmv {
+  delay-ms = <MOUSE_MOTION_DELAY>;
+  acceleration-exponent = <MOUSE_MOTION_ACCELERATION_EXPONENT>;
+  time-to-max-speed-ms = <MOUSE_MOTION_TIME_TO_MAXIMUM_SPEED>;
+};
+&msc {
+  delay-ms = <MOUSE_SCROLL_DELAY>;
+  acceleration-exponent = <MOUSE_SCROLL_ACCELERATION_EXPONENT>;
+  time-to-max-speed-ms = <MOUSE_SCROLL_TIME_TO_MAXIMUM_SPEED>;
+};
+//
+// Scaling for mouse scrolling, based on @caksoylar's example:
+// https://github.com/caksoylar/zmk-config/commit/e35ee2f08788927683df7bbdd7fc73434473886e
+//
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+/ {
+  input_processors {
+    zip_scroll_scaler: zip_scroll_scaler {
+      compatible = "zmk,input-processor-scaler";
+      #input-processor-cells = <2>;
+      type = <INPUT_EV_REL>;
+      codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+      track-remainders;
     };
   };
-  &msc_input_listener {
-    #ifdef LAYER_MouseSlow
-    slow {
-      layers = <LAYER_MouseSlow>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_SLOW>;
-    };
-    #endif
-    #ifdef LAYER_MouseFast
-    fast {
-      layers = <LAYER_MouseFast>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_FAST>;
-    };
-    #endif
-    #ifdef LAYER_MouseWarp
-    warp {
-      layers = <LAYER_MouseWarp>;
-      input-processors = <&zip_scroll_scaler MOUSE_SCALER_WARP>;
-    };
-    #endif
-  };
-  // ==== MOUSE-KEY <section ends> =====
-#else
-  #define mkp none
-  #define mmv none
-  #define msc none
-  #define LCLK
-  #define MCLK
-  #define RCLK
-  #define MB1
-  #define MB2
-  #define MB3
-  #define MB4
-  #define MB5
-  #define MOVE_UP
-  #define MOVE_DOWN
-  #define MOVE_LEFT
-  #define MOVE_RIGHT
-  #define SCRL_UP
-  #define SCRL_DOWN
-  #define SCRL_LEFT
-  #define SCRL_RIGHT
-#endif
+};
+// ==== MOUSE-KEY <section ends> =====
 
 /* Automatically generated keymap */
 / {
