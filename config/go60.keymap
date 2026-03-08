@@ -3346,12 +3346,12 @@ macros {
 
         layer_System {
             bindings = <
- &none               &none               &none                &none               &none                                                                                              &none            &none            &none            &none   &none
- &none               &none               &none                &none               &none   &none                                                                        &none         &none            &none            &none            &none   &none
- &none         &bootloader   &tog LAYER_Typing                &to 1               &to 0   &studio_unlock                                                         &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
- &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                                   &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed   &none
- &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none           &none   &none   &none   &none       &none  &kp C_MUTE   &bt BT_CLR         &bt_0            &bt_1            &bt_2     &out OUT_TOG   &none
- &none               &none               &none                &none               &none                   &none   &none   &none   &none  &kp C_STOP    &kp C_PP                      &none            &none            &none            &none   &none
+ &none               &none               &none                &none               &none   &none                 &none         &none            &none            &none            &none   &none
+ &none         &bootloader   &tog LAYER_Typing                &to 1               &to 0   &studio_unlock  &rgb_effect      &rgb_hue  &rgb_saturation  &rgb_brightness  &rgb_ug RGB_TOG   &none
+ &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD   &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none            &kp C_PREV  &kp C_VOL_DN     &kp C_VOL_UP       &kp C_NEXT       &rgb_speed   &none
+ &none      &kp LS(DELETE)          &kp DELETE  &tog LAYER_Function   &tog LAYER_System   &none            &bt BT_CLR         &bt_0            &bt_1            &bt_2     &out OUT_TOG   &none
+                                         &none                &none               &none                                       &none            &none            &none
+                                                              &none               &none   &none            &kp C_STOP      &kp C_PP       &kp C_MUTE
             >;
         };
 
