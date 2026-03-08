@@ -3390,22 +3390,23 @@ macros {
 
         layer_Number {
             bindings = <
-  &none      &none   &none     &none   &none      &none  &none                &none                &none                &none                &none   &none
-  &none   &kp LBKT  &kp N7    &kp N8  &kp N9   &kp RBKT  &none                &to 0                &none    &tog LAYER_Typing                &none   &none
-  &none    &kp SQT  &kp N4    &kp N5  &kp N6  &kp EQUAL  &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none  &kp GRAVE  &kp N1    &kp N2  &kp N3   &kp BSLH  &none    &tog LAYER_Number    &tog LAYER_Cursor           &kp DELETE       &kp LS(DELETE)   &none
-                     &none     &none   &none                                  &none                &none                &none
-                            &kp FSLH  &kp N0  &kp MINUS  &none                &none                &none
+ &none      &none   &none     &none   &none      &none  &none                &none                &none                &none                &none   &none
+ &none   &kp LBKT  &kp N7    &kp N8  &kp N9   &kp RBKT  &none                &to 0                &none    &tog LAYER_Typing                &none   &none
+ &none    &kp SQT  &kp N4    &kp N5  &kp N6  &kp EQUAL  &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
+ &none  &kp GRAVE  &kp N1    &kp N2  &kp N3   &kp BSLH  &none    &tog LAYER_Number    &tog LAYER_Cursor           &kp DELETE       &kp LS(DELETE)   &none
+                    &none     &none   &none                                  &none                &none                &none
+                           &kp FSLH  &kp N0  &kp MINUS  &none                &none                &none
             >;
         };
 
         layer_Function {
             bindings = <
-  &none    &none   &none   &none   &none            &none                                                       &none                &none                &none                &none                &none   &none
-  &none  &kp F12  &kp F7  &kp F8  &kp F9        &kp PSCRN                                                       &studio_unlock       &to 0                &to 1    &tog LAYER_Typing          &bootloader   &none
-  &none  &kp F11  &kp F4  &kp F5  &kp F6         &kp SLCK                                                       &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &kp K_APP    &none   &none   &none   &none   &none   &none  &tog LAYER_Function    &tog LAYER_System           &kp DELETE       &kp LS(DELETE)   &none
-  &none    &none   &none   &none   &none                   &kp SPACE  &kp TAB   &none   &none   &none   &none                        &none                &none                &none                &none   &none
+ &none    &none   &none      &none      &none            &none  &none                &none                &none                &none                &none   &none
+ &none  &kp F12  &kp F7     &kp F8     &kp F9        &kp PSCRN  &studio_unlock       &to 0                &to 1    &tog LAYER_Typing          &bootloader   &none
+ &none  &kp F11  &kp F4     &kp F5     &kp F6         &kp SLCK  &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
+ &none  &kp F10  &kp F1     &kp F2     &kp F3  &kp PAUSE_BREAK  &none  &tog LAYER_Function    &tog LAYER_System           &kp DELETE       &kp LS(DELETE)   &none
+                  &none      &none      &none                                        &none                &none                &none
+                         &kp K_APP  &kp SPACE          &kp TAB  &none                &none                &none
             >;
         };
 
