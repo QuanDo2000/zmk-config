@@ -11,9 +11,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
-
-/* On demand includes */
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/zmk/pointing.h>
+
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 /* Helper Macros, based on https://github.com/urob/zmk-helpers/ */
 
@@ -603,12 +606,28 @@
 
 /* Glove80 system behavior & macros */
 / {
+    input_processors {
+        zip_click_to_right_click_mapper: zip_click_to_right_click_mapper {
+            compatible = "zmk,input-processor-code-mapper";
+            #input-processor-cells = <0>;
+            type = <INPUT_EV_KEY>;
+            map = <INPUT_BTN_0 INPUT_BTN_1>;
+        };
+    };
+
     behaviors {
         ZMK_TD_LAYER(lower, LAYER_Lower)
-    };
-};
 
-/ {
+        magic: magic {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&rgb_ug_status_macro>;
+        };
+    };
+
     macros {
         rgb_ug_status_macro: rgb_ug_status_macro {
             label = "RGB_UG_STATUS";
@@ -727,14 +746,6 @@
 
 / {
     behaviors {
-        magic: magic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MAGIC_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&rgb_ug_status_macro>;
-        };
     };
 };
 
@@ -3465,5 +3476,21 @@ macros {
             >;
         };
 
+    };
+};
+
+&cirque_rh_listener {
+    input-processors = <&zip_xy_scaler 3 1>;
+    layer_2 {
+        layers = <2>;
+        input-processors = <&zip_xy_scaler 9 1>;
+    };
+};
+
+&cirque_lh_listener {
+    input-processors = <&zip_xy_to_scroll_mapper>, <&zip_xy_scaler 1 8>, <&zip_click_to_right_click_mapper>;
+    layer_4 {
+        layers = <4>;
+        input-processors = <&zip_xy_scaler 3 1>;
     };
 };
