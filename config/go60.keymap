@@ -3368,11 +3368,12 @@ macros {
 
         layer_Mouse {
             bindings = <
-  &none               &none               &none               &none               &none   &none                                                                         &none                   &none                 &none                    &none      &none   &none
-  &none               &none   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                                                                         &none                   &none                 &none                    &none      &none   &none
-  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none                                                                &mmv MOVE_LEFT          &mmv MOVE_DOWN          &mmv MOVE_UP          &mmv MOVE_RIGHT   &mkp MB4   &none
-  &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Symbol    &tog LAYER_Mouse   &none   &none   &none   &none   &none      &none  &mkp MCLK  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT   &mkp MB5   &none
-  &none               &none               &none               &none               &none           &none   &none   &none   &none  &mkp RCLK  &mkp LCLK                                           &none                 &none                    &none      &none   &none
+ &none               &none               &none               &none               &none   &none                   &none                   &none                 &none                    &none      &none   &none
+ &none               &none   &tog LAYER_Typing   &tog LAYER_Gaming               &to 0   &none                   &none                   &none                 &none                    &none      &none   &none
+ &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD   &none          &mmv MOVE_LEFT          &mmv MOVE_DOWN          &mmv MOVE_UP          &mmv MOVE_RIGHT   &mkp MB4   &none
+ &none      &kp LS(DELETE)          &kp DELETE   &tog LAYER_Symbol    &tog LAYER_Mouse   &none  &msc MOUSE_SCROLL_LEFT  &msc MOUSE_SCROLL_DOWN  &msc MOUSE_SCROLL_UP  &msc MOUSE_SCROLL_RIGHT   &mkp MB5   &none
+                                         &none               &none               &none                                                   &none                 &none                    &none
+                                                             &none               &none   &none               &mkp RCLK               &mkp LCLK             &mkp MCLK
             >;
         };
 
