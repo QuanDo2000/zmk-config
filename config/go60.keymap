@@ -3412,21 +3412,23 @@ macros {
 
         layer_Button {
             bindings = <
-  &none               &none               &none               &none               &none        &none                                                                                                     &none                &none                &none                &none                &none   &none
-  &none               &none           &kp PSCRN           &kp _FIND             &kp RET  &select_all                                                                                               &select_all              &kp RET            &kp _FIND            &kp PSCRN                &none   &none
-  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD    &kp _UNDO                                                                                                 &kp _UNDO  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none           &kp _UNDO            &kp _CUT           &kp _COPY          &kp _PASTE    &kp _REDO  &tog LAYER_System             &none   &none   &none              &none  &tog LAYER_Function    &kp _REDO           &kp _PASTE            &kp _COPY             &kp _CUT            &kp _UNDO   &none
-  &none               &none               &none               &none               &none               &tog LAYER_Cursor  &tog LAYER_Mouse   &none   &none  &tog LAYER_Symbol    &tog LAYER_Number                             &none                &none                &none                &none   &none
+ &none               &none               &none               &none               &none             &none              &none                &none                &none                &none                &none   &none
+ &none               &none           &kp PSCRN           &kp _FIND             &kp RET       &select_all        &select_all              &kp RET            &kp _FIND            &kp PSCRN                &none   &none
+ &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD         &kp _UNDO          &kp _UNDO  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
+ &none           &kp _UNDO            &kp _CUT           &kp _COPY          &kp _PASTE         &kp _REDO          &kp _REDO           &kp _PASTE            &kp _COPY             &kp _CUT            &kp _UNDO   &none
+                                         &none               &none               &none                                                     &none                &none                &none
+                                                 &tog LAYER_System   &tog LAYER_Cursor  &tog LAYER_Mouse  &tog LAYER_Symbol    &tog LAYER_Number  &tog LAYER_Function
             >;
         };
 
         layer_Button_Mac {
             bindings = <
-  &none               &none               &none               &none               &none            &none                                                                                                         &none                &none                &none                &none                &none   &none
-  &none               &none      &kp _PSCRN_Mac       &kp _FIND_Mac             &kp RET  &select_all_mac                                                                                               &select_all_mac              &kp RET        &kp _FIND_Mac       &kp _PSCRN_Mac                &none   &none
-  &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD    &kp _UNDO_Mac                                                                                                 &kp _UNDO_Mac  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none       &kp _UNDO_Mac        &kp _CUT_Mac       &kp _COPY_Mac      &kp _PASTE_Mac    &kp _REDO_Mac  &tog LAYER_System             &none   &none   &none              &none  &tog LAYER_Function    &kp _REDO_Mac       &kp _PASTE_Mac        &kp _COPY_Mac         &kp _CUT_Mac        &kp _UNDO_Mac   &none
-  &none               &none               &none               &none               &none                   &tog LAYER_Cursor  &tog LAYER_Mouse   &none   &none  &tog LAYER_Symbol    &tog LAYER_Number                                 &none                &none                &none                &none   &none
+ &none               &none               &none               &none               &none            &none               &none                &none                &none                &none                &none   &none
+ &none               &none      &kp _PSCRN_Mac       &kp _FIND_Mac             &kp RET  &select_all_mac     &select_all_mac              &kp RET        &kp _FIND_Mac       &kp _PSCRN_Mac                &none   &none
+ &none  &kp LEFT_PINKY_MOD  &kp LEFT_RINGY_MOD  &kp LEFT_MIDDY_MOD  &kp LEFT_INDEX_MOD    &kp _UNDO_Mac       &kp _UNDO_Mac  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
+ &none       &kp _UNDO_Mac        &kp _CUT_Mac       &kp _COPY_Mac      &kp _PASTE_Mac    &kp _REDO_Mac       &kp _REDO_Mac       &kp _PASTE_Mac        &kp _COPY_Mac         &kp _CUT_Mac        &kp _UNDO_Mac   &none
+                                         &none               &none               &none                                                     &none                &none                &none
+                                                 &tog LAYER_System   &tog LAYER_Cursor  &tog LAYER_Mouse  &tog LAYER_Symbol    &tog LAYER_Number  &tog LAYER_Function
             >;
         };
 
