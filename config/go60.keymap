@@ -3456,12 +3456,12 @@ macros {
 
         layer_Magic {
             bindings = <
-  &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &to 0            &to 1            &to 2            &to 3            &to 4            &none                                                         &none   &none   &none   &none   &none           &none
-       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
- &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-  &sys_reset            &none            &none            &none            &none            &none   &bt_2   &bt_3       &tog 19   &none   &none   &none   &none   &none   &none   &none   &none      &sys_reset
-       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
+       &to 0            &to 1            &to 2            &to 3            &to 4          &bt BT_CLR  &none  &none  &none  &none  &none  &bt BT_CLR_ALL
+ &bootloader  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI     &rgb_ug RGB_TOG  &none  &none  &none  &none  &none     &bootloader
+  &sys_reset  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD     &rgb_ug RGB_EFF  &none  &none  &none  &none  &none      &sys_reset
+       &none            &bt_0            &bt_1            &bt_2            &bt_3  &tog LAYER_Factory  &none  &none  &none  &none  &none           &none
+                                  &out OUT_USB            &none            &none                             &none  &none  &none
+                                                          &none            &none               &none  &none  &none  &none
             >;
         };
 
