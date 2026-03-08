@@ -3379,11 +3379,12 @@ macros {
 
         layer_Symbol {
             bindings = <
-  &none          &none       &none       &none       &none          &none                                                                &none                &none                &none                &none                &none   &none
-  &none   &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)                                                                &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing                &none   &none
-  &none    &kp LS(SQT)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(EQUAL)                                                                &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
-  &none  &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH)  &kp LS(FSLH)          &none   &none   &none   &none   &none   &none    &tog LAYER_Symbol     &tog LAYER_Mouse           &kp DELETE       &kp LS(DELETE)   &none
-  &none          &none       &none       &none       &none                   &kp LS(N0)  &kp LS(MINUS)   &none   &none   &none   &none                        &none                &none                &none                &none   &none
+ &none          &none       &none         &none       &none          &none  &none                &none                &none                &none                &none   &none
+ &none   &kp LS(LBKT)  &kp LS(N7)    &kp LS(N8)  &kp LS(N9)   &kp LS(RBKT)  &none                &to 0      &tog LAYER_Dota    &tog LAYER_Typing                &none   &none
+ &none    &kp LS(SQT)  &kp LS(N4)    &kp LS(N5)  &kp LS(N6)  &kp LS(EQUAL)  &none  &kp RIGHT_INDEX_MOD  &kp RIGHT_MIDDY_MOD  &kp RIGHT_RINGY_MOD  &kp RIGHT_PINKY_MOD   &none
+ &none  &kp LS(GRAVE)  &kp LS(N1)    &kp LS(N2)  &kp LS(N3)   &kp LS(BSLH)  &none    &tog LAYER_Symbol     &tog LAYER_Mouse           &kp DELETE       &kp LS(DELETE)   &none
+ &none          &none       &none         &none       &none                                      &none                &none                &none                &none   &none
+                                   &kp LS(FSLH)  &kp LS(N0)  &kp LS(MINUS)  &none                &none                &none
             >;
         };
 
