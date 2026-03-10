@@ -45,11 +45,11 @@
 #define KB_TYPE_GLOVE_80 1
 #define KB_TYPE_GO_60    2
 
-#define KB_TYPE          KB_TYPE_GLOVE_80
+#define KB_TYPE          KB_TYPE_GO_60
 
 /* Automatically generated layer name #define */
-#define LAYER_QWERTY 0
-#define LAYER_QWERTY_Mac 1
+#define LAYER_QWERTY_Mac 0
+#define LAYER_QWERTY 1
 #define LAYER_Typing 2
 #define LAYER_Gaming 3
 #define LAYER_Dota 4
@@ -235,8 +235,8 @@
         layer-id = <0>;
       };
 
-      #ifdef LAYER_QWERTY_Mac
-      QWERTY_Mac {
+      #ifdef LAYER_QWERTY
+      QWERTY {
         bindings = <
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ RED ___                   ___ ___ ___ ___ ___ ___
@@ -245,7 +245,7 @@
                   ___ ___ RED                           LAC ___ ___
                               BSL BNL BCL   COR LAC LAC
         >;
-        layer-id = <LAYER_QWERTY_Mac>;
+        layer-id = <LAYER_QWERTY>;
       };
       #endif
 
@@ -3212,17 +3212,6 @@ macros {
     keymap {
         compatible = "zmk,keymap";
 
-        layer_QWERTY {
-            bindings = <
-            &kp EQUAL                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5  &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0             &kp MINUS
-            &kp GRAVE                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T   &kp Y                          &kp U                          &kp I                          &kp O                             &kp P              &kp BSLH
-             &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G   &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)               &kp SQT
- &magic LAYER_Magic 0         &thumb LAYER_Button Z                         &kp X                         &kp C                         &kp V   &kp B   &kp N                          &kp M                      &kp COMMA                        &kp DOT          &thumb LAYER_Button FSLH  &magic LAYER_Magic 0
-                                                                         &kp LEFT                     &kp RIGHT       &thumb LAYER_System ESC                   &thumb LAYER_Function DELETE                         &kp UP                       &kp DOWN
-                                                                                      &space LAYER_Cursor SPACE        &thumb LAYER_Mouse TAB  &lower  &lower      &thumb LAYER_Symbol ENTER       &thumb LAYER_Number BSPC
-            >;
-        };
-
         layer_QWERTY_Mac {
             bindings = <
             &kp EQUAL                                &kp N1                            &kp N2                            &kp N3                            &kp N4  &kp N5  &kp N6                             &kp N7                             &kp N8                             &kp N9                                    &kp N0             &kp MINUS
@@ -3231,6 +3220,17 @@ macros {
  &magic LAYER_Magic 0             &thumb LAYER_Button_Mac Z                             &kp X                             &kp C                             &kp V   &kp B   &kp N                              &kp M                          &kp COMMA                            &kp DOT              &thumb LAYER_Button_Mac FSLH  &magic LAYER_Magic 0
                                                                                      &kp LEFT                         &kp RIGHT           &thumb LAYER_System ESC                       &thumb LAYER_Function DELETE                             &kp UP                           &kp DOWN
                                                                                                       &space LAYER_Cursor SPACE            &thumb LAYER_Mouse TAB  &lower  &lower          &thumb LAYER_Symbol ENTER           &thumb LAYER_Number BSPC
+            >;
+        };
+
+        layer_QWERTY {
+            bindings = <
+            &kp EQUAL                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5  &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0             &kp MINUS
+            &kp GRAVE                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T   &kp Y                          &kp U                          &kp I                          &kp O                             &kp P              &kp BSLH
+             &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G   &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)               &kp SQT
+ &magic LAYER_Magic 0         &thumb LAYER_Button Z                         &kp X                         &kp C                         &kp V   &kp B   &kp N                          &kp M                      &kp COMMA                        &kp DOT          &thumb LAYER_Button FSLH  &magic LAYER_Magic 0
+                                                                         &kp LEFT                     &kp RIGHT       &thumb LAYER_System ESC                   &thumb LAYER_Function DELETE                         &kp UP                       &kp DOWN
+                                                                                      &space LAYER_Cursor SPACE        &thumb LAYER_Mouse TAB  &lower  &lower      &thumb LAYER_Symbol ENTER       &thumb LAYER_Number BSPC
             >;
         };
 
@@ -3480,17 +3480,13 @@ macros {
 };
 
 &cirque_rh_listener {
-    input-processors = <&zip_xy_scaler 3 1>;
-    layer_2 {
-        layers = <2>;
-        input-processors = <&zip_xy_scaler 9 1>;
+    input-processors = <&zip_xy_scaler 2 1>;
+    layer_Mouse {
+        layers = <LAYER_Mouse>;
+        input-processors = <&zip_xy_scaler 6 1>;
     };
 };
 
 &cirque_lh_listener {
-    input-processors = <&zip_xy_to_scroll_mapper>, <&zip_xy_scaler 1 8>, <&zip_click_to_right_click_mapper>;
-    layer_4 {
-        layers = <4>;
-        input-processors = <&zip_xy_scaler 3 1>;
-    };
+    input-processors = <&zip_xy_to_scroll_mapper>, <&zip_xy_scaler 11 12>, <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, <&zip_click_to_right_click_mapper>;
 };
