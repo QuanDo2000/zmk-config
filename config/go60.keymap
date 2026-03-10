@@ -229,8 +229,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <0>;
       };
@@ -242,8 +242,8 @@
           ___ ___ ___ ___ RED ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              RED BNL BCL   LAC LAC LAC
+                  ___ ___ RED                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_QWERTY_Mac>;
       };
@@ -256,8 +256,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftPinky>;
       };
@@ -270,8 +270,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftRingy>;
       };
@@ -284,8 +284,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftMiddy>;
       };
@@ -298,8 +298,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftIndex>;
       };
@@ -312,8 +312,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightIndex>;
       };
@@ -326,8 +326,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightMiddy>;
       };
@@ -340,8 +340,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightRingy>;
       };
@@ -354,8 +354,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
-                  ___ ___ ___                           ___ ___ ___
-                              BSL BNL BCL   LAC LAC LAC
+                  ___ ___ LAC                           LAC ___ ___
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightPinky>;
       };
@@ -368,8 +368,8 @@
           ___ PUR COR COR COR PUR                   PNK PNK PNK PNK PNK ___
           ___ MAJ CYN GRN YLW ___                   AZU AZU AZU AZU PNK ___
           ___ SPG SPG COR COR ___                   BLU BLU BLU BLU BLU ___
-                  ___ ___ ___                           ___ ___ ___
-                              RED ___ ___   AZU AZU AZU
+                  ___ ___ RED                           AZU ___ ___
+                              ___ ___ ___   ___ AZU AZU
         >;
         layer-id = <LAYER_System>;
       };
@@ -382,8 +382,8 @@
           ___ ___ COR ___ COR ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   AZU AZU AZU AZU SPG ___
           ___ SPG SPG COR COR ___                   SPG SPG SPG SPG SPG ___
-                  ___ ___ ___                           ___ ___ ___
-                              ___ RED ___   SPG SPG SPG
+                  ___ ___ ___                           SPG ___ ___
+                              RED ___ ___   ___ SPG SPG
         >;
         layer-id = <LAYER_Cursor>;
       };
@@ -396,8 +396,8 @@
           ___ ___ COR COR COR ___                   ___ ___ ___ ___ ___ ___
           ___ MAJ CYN GRN YLW ___                   AZU AZU AZU AZU AZU ___
           ___ SPG SPG COR COR ___                   AZU AZU AZU AZU AZU ___
-                  ___ ___ ___                           ___ ___ ___
-                              ___ ___ RED   AZU AZU AZU
+                  ___ ___ ___                           AZU ___ ___
+                              ___ RED ___   ___ AZU AZU
         >;
         layer-id = <LAYER_Mouse>;
       };
@@ -410,8 +410,8 @@
           ___ PNK PNK PNK PNK GDN                   PUR COR COR COR PUR ___
           ___ PNK PNK PNK PNK SSL                   ___ YLW GRN CYN MAJ ___
           ___ PNK PNK PNK PNK GDN                   ___ COR COR SPG SPG ___
-                  ___ ___ ___                           ___ ___ ___
-                              GDN SPG SPG   ___ ___ RED
+                  ___ ___ GDN                           RED ___ ___
+                              SPG SPG ___   ___ ___ ___
         >;
         layer-id = <LAYER_Function>;
       };
@@ -424,8 +424,8 @@
           ___ SPG GOL GOL GOL SPG                   ___ COR ___ COR ___ ___
           ___ SPG GOL GOL GOL SPG                   ___ YLW GRN CYN MAJ ___
           ___ SPG GOL GOL GOL SPG                   ___ COR COR SPG SPG ___
-                  ___ ___ ___                           ___ ___ ___
-                              SPG SPG SPG   ___ RED ___
+                  ___ ___ SPG                           ___ ___ ___
+                              SPG SPG ___   ___ ___ RED
         >;
         layer-id = <LAYER_Number>;
       };
@@ -438,8 +438,8 @@
           ___ SPG SPG SPG SPG SPG                   ___ COR COR COR ___ ___
           ___ SPG SPG SPG SPG SPG                   ___ YLW GRN CYN MAJ ___
           ___ SPG SPG SPG SPG SPG                   ___ COR COR SPG SPG ___
-                  ___ ___ ___                           ___ ___ ___
-                              SPG SPG SPG   RED ___ ___
+                  ___ ___ SPG                           ___ ___ ___
+                              SPG SPG ___   ___ RED ___
         >;
         layer-id = <LAYER_Symbol>;
       };
@@ -452,8 +452,8 @@
           ___ ___ GDN ORN ORN ORN                   ORN ORN ORN ORN ___ ___
           ___ MAJ CYN GRN YLW ORN                   ORN YLW GRN CYN MAJ ___
           ___ ORN ORN ORN ORN ORN                   ORN ORN ORN ORN ORN ___
-                  ___ ___ ___                           ___ ___ ___
-                              COR COR COR   COR COR COR
+                  ___ ___ COR                           COR ___ ___
+                              COR COR ___   ___ COR COR
         >;
         layer-id = <LAYER_Button>;
       };
@@ -466,8 +466,8 @@
           ___ ___ GDN ORN ORN ORN                   ORN ORN ORN ORN ___ ___
           ___ MAJ CYN GRN YLW ORN                   ORN YLW GRN CYN MAJ ___
           ___ ORN ORN ORN ORN ORN                   ORN ORN ORN ORN ORN ___
-                  ___ ___ ___                           ___ ___ ___
-                              COR COR COR   COR COR COR
+                  ___ ___ COR                           COR ___ ___
+                              COR COR ___   ___ COR COR
         >;
         layer-id = <LAYER_Button_Mac>;
       };
@@ -480,8 +480,8 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
-                  RED ___ ___                           ___ ___ RED
-                              ___ ___ ___   ___ ___ ___
+                  ___ ___ ___                           ___ ___ ___
+                              ___ ___ RED   RED ___ ___
         >;
         layer-id = <LAYER_Typing>;
       };
@@ -494,8 +494,8 @@
           GDN GDN GDN AZU GDN GDN                   ___ ___ ___ ___ ___ ___
           GDN YLW AZU AZU AZU GDN                   ___ ___ ___ ___ ___ ___
           SCL GRN GDN GDN GDN GDN                   ___ ___ ___ ___ ___ ___
-                  GDN GDN GDN                           ___ ___ RED
-                              ___ COR CYN   ___ ___ ___
+                  GDN GDN ___                           ___ ___ ___
+                              COR CYN COR   RED ___ ___
         >;
         layer-id = <LAYER_Gaming>;
       };
@@ -508,8 +508,8 @@
           COR GDN GDN AZU GDN GDN                   ___ ___ ___ ___ ___ ___
           YLW AZU AZU AZU AZU GDN                   ___ ___ ___ ___ ___ ___
           SCL AZU AZU AZU AZU GDN                   ___ ___ ___ ___ ___ ___
-                  GDN GDN GDN                           ___ ___ RED
-                              ___ COR CYN   ___ ___ ___
+                  GDN GDN ___                           ___ ___ ___
+                              COR CYN COR   RED ___ ___
         >;
         layer-id = <LAYER_Dota>;
       };
@@ -522,8 +522,8 @@
           GDN ___ ___ AZU ___ GDN                   GOL GOL GOL GOL GOL SSL
           GDN ___ AZU AZU AZU GDN                   GOL GOL GOL GOL GOL SNL
           GDN GDN ___ GDN GDN GDN                   GOL GOL GOL GOL GOL GOL
-                  GDN GDN GDN                           ___ ___ RED
-                              RED RED RED   RED RED RED
+                  GDN GDN RED                           RED GOL GOL
+                              RED RED ___   ___ RED RED
         >;
         layer-id = <LAYER_Lower>;
       };
@@ -537,7 +537,7 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           RED ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
                   ___ ___ ___                           ___ ___ ___
-                              ___ ___ ___   ___ ___ ___
+                              ___ ___ RED   ___ ___ ___
         >;
         layer-id = <LAYER_Factory>;
       };
@@ -916,18 +916,18 @@
 #define KEY_RH_C4R4 DOT
 #define KEY_RH_C5R4 FSLH
 #define KEY_RH_C6R4 RSFT
-#define KEY_LH_C4R5 LCTRL
-#define KEY_LH_C3R5 LEFT
-#define KEY_LH_C2R5 RIGHT
-#define KEY_RH_C2R5 UP
-#define KEY_RH_C3R5 DOWN
-#define KEY_RH_C4R5 RCTRL
-#define KEY_LH_T1 ESC
-#define KEY_LH_T2 SPACE
-#define KEY_LH_T3 TAB
-#define KEY_RH_T3 ENTER
-#define KEY_RH_T2 BACKSPACE
-#define KEY_RH_T1 DELETE
+#define KEY_LH_C4R5 LEFT
+#define KEY_LH_C3R5 RIGHT
+#define KEY_LH_C2R5 ESC
+#define KEY_RH_C2R5 DELETE
+#define KEY_RH_C3R5 UP
+#define KEY_RH_C4R5 DOWN
+#define KEY_LH_T1 SPACE
+#define KEY_LH_T2 TAB
+#define KEY_LH_T3 LALT
+#define KEY_RH_T3 RALT
+#define KEY_RH_T2 ENTER
+#define KEY_RH_T1 BACKSPACE
 
 combos {};
 
@@ -3214,56 +3214,56 @@ macros {
 
         layer_QWERTY {
             bindings = <
-            &kp EQUAL                        &kp N1                        &kp N2                        &kp N3                        &kp N4                   &kp N5                     &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0             &kp MINUS
-            &kp GRAVE                         &kp Q                         &kp W                         &kp E                         &kp R                    &kp T                      &kp Y                          &kp U                          &kp I                          &kp O                             &kp P              &kp BSLH
-             &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)                    &kp G                      &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)               &kp SQT
- &magic LAYER_Magic 0         &thumb LAYER_Button Z                         &kp X                         &kp C                         &kp V                    &kp B                      &kp N                          &kp M                      &kp COMMA                        &kp DOT          &thumb LAYER_Button FSLH  &magic LAYER_Magic 0
-                                                                           &lower                      &kp LEFT                     &kp RIGHT                                                                             &kp UP                       &kp DOWN                         &lower
-                                                                                        &thumb LAYER_System ESC     &space LAYER_Cursor SPACE   &thumb LAYER_Mouse TAB  &thumb LAYER_Symbol ENTER  &thumb LAYER_Number BACKSPACE   &thumb LAYER_Function DELETE
+            &kp EQUAL                        &kp N1                        &kp N2                        &kp N3                        &kp N4  &kp N5  &kp N6                         &kp N7                         &kp N8                         &kp N9                            &kp N0             &kp MINUS
+            &kp GRAVE                         &kp Q                         &kp W                         &kp E                         &kp R   &kp T   &kp Y                          &kp U                          &kp I                          &kp O                             &kp P              &kp BSLH
+             &kp CAPS  &LeftPinky (A, LAYER_QWERTY)  &LeftRingy (S, LAYER_QWERTY)  &LeftMiddy (D, LAYER_QWERTY)  &LeftIndex (F, LAYER_QWERTY)   &kp G   &kp H  &RightIndex (J, LAYER_QWERTY)  &RightMiddy (K, LAYER_QWERTY)  &RightRingy (L, LAYER_QWERTY)  &RightPinky (SEMI, LAYER_QWERTY)               &kp SQT
+ &magic LAYER_Magic 0         &thumb LAYER_Button Z                         &kp X                         &kp C                         &kp V   &kp B   &kp N                          &kp M                      &kp COMMA                        &kp DOT          &thumb LAYER_Button FSLH  &magic LAYER_Magic 0
+                                                                         &kp LEFT                     &kp RIGHT       &thumb LAYER_System ESC                   &thumb LAYER_Function DELETE                         &kp UP                       &kp DOWN
+                                                                                      &space LAYER_Cursor SPACE        &thumb LAYER_Mouse TAB  &lower  &lower      &thumb LAYER_Symbol ENTER  &thumb LAYER_Number BACKSPACE
             >;
         };
 
         layer_QWERTY_Mac {
             bindings = <
-            &kp EQUAL                                &kp N1                            &kp N2                            &kp N3                            &kp N4                   &kp N5                     &kp N6                             &kp N7                             &kp N8                             &kp N9                                    &kp N0             &kp MINUS
-            &kp GRAVE                                 &kp Q                             &kp W                             &kp E                             &kp R                    &kp T                      &kp Y                              &kp U                              &kp I                              &kp O                                     &kp P              &kp BSLH
-             &kp CAPS      &LeftPinky (A, LAYER_QWERTY_Mac)  &LeftRingy (S, LAYER_QWERTY_Mac)  &LeftMiddy (D, LAYER_QWERTY_Mac)  &LeftIndex (F, LAYER_QWERTY_Mac)                    &kp G                      &kp H  &RightIndex (J, LAYER_QWERTY_Mac)  &RightMiddy (K, LAYER_QWERTY_Mac)  &RightRingy (L, LAYER_QWERTY_Mac)      &RightPinky (SEMI, LAYER_QWERTY_Mac)               &kp SQT
- &magic LAYER_Magic 0             &thumb LAYER_Button_Mac Z                             &kp X                             &kp C                             &kp V                    &kp B                      &kp N                              &kp M                          &kp COMMA                            &kp DOT              &thumb LAYER_Button_Mac FSLH  &magic LAYER_Magic 0
-                                                                                       &lower                          &kp LEFT                         &kp RIGHT                                                                                 &kp UP                           &kp DOWN                             &lower
-                                                                                                        &thumb LAYER_System ESC         &space LAYER_Cursor SPACE   &thumb LAYER_Mouse TAB  &thumb LAYER_Symbol ENTER      &thumb LAYER_Number BACKSPACE       &thumb LAYER_Function DELETE
+            &kp EQUAL                                &kp N1                            &kp N2                            &kp N3                            &kp N4  &kp N5  &kp N6                             &kp N7                             &kp N8                             &kp N9                                    &kp N0             &kp MINUS
+            &kp GRAVE                                 &kp Q                             &kp W                             &kp E                             &kp R   &kp T   &kp Y                              &kp U                              &kp I                              &kp O                                     &kp P              &kp BSLH
+             &kp CAPS      &LeftPinky (A, LAYER_QWERTY_Mac)  &LeftRingy (S, LAYER_QWERTY_Mac)  &LeftMiddy (D, LAYER_QWERTY_Mac)  &LeftIndex (F, LAYER_QWERTY_Mac)   &kp G   &kp H  &RightIndex (J, LAYER_QWERTY_Mac)  &RightMiddy (K, LAYER_QWERTY_Mac)  &RightRingy (L, LAYER_QWERTY_Mac)      &RightPinky (SEMI, LAYER_QWERTY_Mac)               &kp SQT
+ &magic LAYER_Magic 0             &thumb LAYER_Button_Mac Z                             &kp X                             &kp C                             &kp V   &kp B   &kp N                              &kp M                          &kp COMMA                            &kp DOT              &thumb LAYER_Button_Mac FSLH  &magic LAYER_Magic 0
+                                                                                     &kp LEFT                         &kp RIGHT           &thumb LAYER_System ESC                       &thumb LAYER_Function DELETE                             &kp UP                           &kp DOWN
+                                                                                                      &space LAYER_Cursor SPACE            &thumb LAYER_Mouse TAB  &lower  &lower          &thumb LAYER_Symbol ENTER      &thumb LAYER_Number BACKSPACE
             >;
         };
 
         layer_Typing {
             bindings = <
- &trans              &trans              &trans              &trans              &trans         &trans         &trans               &trans               &trans               &trans               &trans  &trans
- &trans              &trans              &trans              &trans              &trans         &trans         &trans               &trans               &trans               &trans               &trans  &trans
- &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY         &trans         &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
- &trans     &kp KEY_LH_C5R4              &trans              &trans              &trans         &trans         &trans               &trans               &trans               &trans      &kp KEY_RH_C5R4  &trans
-                              &tog LAYER_Typing              &trans              &trans                                             &trans               &trans    &tog LAYER_Typing
-                                                      &kp KEY_LH_T1       &kp KEY_LH_T2  &kp KEY_LH_T3  &kp KEY_RH_T3        &kp KEY_RH_T2        &kp KEY_RH_T1
+ &trans              &trans              &trans              &trans              &trans             &trans             &trans               &trans               &trans               &trans               &trans  &trans
+ &trans              &trans              &trans              &trans              &trans             &trans             &trans               &trans               &trans               &trans               &trans  &trans
+ &trans  &kp LEFT_PINKY_KEY  &kp LEFT_RINGY_KEY  &kp LEFT_MIDDY_KEY  &kp LEFT_INDEX_KEY             &trans             &trans  &kp RIGHT_INDEX_KEY  &kp RIGHT_MIDDY_KEY  &kp RIGHT_RINGY_KEY  &kp RIGHT_PINKY_KEY  &trans
+ &trans     &kp KEY_LH_C5R4              &trans              &trans              &trans             &trans             &trans               &trans               &trans               &trans      &kp KEY_RH_C5R4  &trans
+                                         &trans              &trans       &kp KEY_LH_T1                                              &kp KEY_RH_T1               &trans               &trans
+                                                      &kp KEY_LH_T2       &kp KEY_LH_T3  &tog LAYER_Typing  &tog LAYER_Typing        &kp KEY_RH_T3        &kp KEY_RH_T2
             >;
         };
 
         layer_Gaming {
             bindings = <
-   &kp N5  &kp GRAVE  &kp N1   &kp N2     &kp N3    &kp N4   &kp N6    &kp N7     &kp N8             &kp N9    &kp N0  &kp MINUS
-    &kp T    &kp TAB   &kp Q    &kp W      &kp E     &kp R    &kp Y     &kp U      &kp I              &kp O     &kp P   &kp BSLH
-    &kp G  &kp LSHFT   &kp A    &kp S      &kp D     &kp F    &kp H     &kp J      &kp K              &kp L  &kp SEMI    &kp SQT
- &kp CAPS  &kp LCTRL   &kp Z    &kp X      &kp C     &kp V    &kp N     &kp M  &kp COMMA            &kp DOT  &kp FSLH  &kp RSHFT
-                       &kp B    &kp N      &kp M                       &kp UP   &kp DOWN  &tog LAYER_Gaming
-                              &kp ESC  &kp SPACE  &kp LALT  &kp RET  &kp BSPC    &kp DEL
+   &kp N5  &kp GRAVE  &kp N1     &kp N2    &kp N3  &kp N4              &kp N6   &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+    &kp T    &kp TAB   &kp Q      &kp W     &kp E   &kp R               &kp Y    &kp U      &kp I     &kp O     &kp P   &kp BSLH
+    &kp G  &kp LSHFT   &kp A      &kp S     &kp D   &kp F               &kp H    &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+ &kp CAPS  &kp LCTRL   &kp Z      &kp X     &kp C   &kp V               &kp N    &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                       &kp N      &kp M   &kp ESC                              &kp DEL     &kp UP  &kp DOWN
+                              &kp SPACE  &kp LALT   &kp B   &tog LAYER_Gaming  &kp RET   &kp BSPC
             >;
         };
 
         layer_Dota {
             bindings = <
- &kp GRAVE  &kp F1  &kp F2   &kp F3     &kp F4    &kp F5   &kp N6    &kp N7     &kp N8           &kp N9    &kp N0  &kp MINUS
-   &kp TAB  &kp N1  &kp N2   &kp N3     &kp N4    &kp N5    &kp Y     &kp U      &kp I            &kp O     &kp P   &kp BSLH
- &kp LSHFT   &kp Q   &kp W    &kp E      &kp R     &kp T    &kp H     &kp J      &kp K            &kp L  &kp SEMI    &kp SQT
-  &kp CAPS   &kp A   &kp S    &kp D      &kp F     &kp G    &kp N     &kp M  &kp COMMA          &kp DOT  &kp FSLH  &kp RSHFT
-                     &kp X    &kp C      &kp V                       &kp UP   &kp DOWN  &tog LAYER_Dota
-                            &kp ESC  &kp SPACE  &kp LALT  &kp RET  &kp BSPC    &kp DEL
+ &kp GRAVE  &kp F1  &kp F2     &kp F3    &kp F4  &kp F5           &kp N6   &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+   &kp TAB  &kp N1  &kp N2     &kp N3    &kp N4  &kp N5            &kp Y    &kp U      &kp I     &kp O     &kp P   &kp BSLH
+ &kp LSHFT   &kp Q   &kp W      &kp E     &kp R   &kp T            &kp H    &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+  &kp CAPS   &kp A   &kp S      &kp D     &kp F   &kp G            &kp N    &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                     &kp C      &kp V   &kp ESC                           &kp DEL     &kp UP  &kp DOWN
+                            &kp SPACE  &kp LALT   &kp X  &tog LAYER_Dota  &kp RET   &kp BSPC
             >;
         };
 
