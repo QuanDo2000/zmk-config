@@ -230,7 +230,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <0>;
       };
@@ -243,7 +243,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ RED                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_QWERTY>;
       };
@@ -257,7 +257,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftPinky>;
       };
@@ -271,7 +271,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftRingy>;
       };
@@ -285,7 +285,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftMiddy>;
       };
@@ -299,7 +299,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_LeftIndex>;
       };
@@ -313,7 +313,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightIndex>;
       };
@@ -327,7 +327,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightMiddy>;
       };
@@ -341,7 +341,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightRingy>;
       };
@@ -355,7 +355,7 @@
           ___ MAJ CYN GRN YLW ___                   ___ YLW GRN CYN MAJ ___
           YLW LAC ___ ___ ___ ___                   ___ ___ ___ ___ LAC YLW
                   ___ ___ LAC                           LAC ___ ___
-                              BSL BNL BCL   LAC LAC COR
+                              BSL BNL BCL   COR LAC LAC
         >;
         layer-id = <LAYER_RightPinky>;
       };
@@ -369,7 +369,7 @@
           ___ MAJ CYN GRN YLW ___                   AZU AZU AZU AZU PNK ___
           ___ SPG SPG COR COR ___                   BLU BLU BLU BLU BLU ___
                   ___ ___ RED                           AZU ___ ___
-                              ___ ___ ___   AZU AZU ___
+                              ___ ___ ___   ___ AZU AZU
         >;
         layer-id = <LAYER_System>;
       };
@@ -383,7 +383,7 @@
           ___ MAJ CYN GRN YLW ___                   AZU AZU AZU AZU SPG ___
           ___ SPG SPG COR COR ___                   SPG SPG SPG SPG SPG ___
                   ___ ___ ___                           SPG ___ ___
-                              RED ___ ___   SPG SPG ___
+                              RED ___ ___   ___ SPG SPG
         >;
         layer-id = <LAYER_Cursor>;
       };
@@ -397,7 +397,7 @@
           ___ MAJ CYN GRN YLW ___                   AZU AZU AZU AZU AZU ___
           ___ SPG SPG COR COR ___                   AZU AZU AZU AZU AZU ___
                   ___ ___ ___                           AZU ___ ___
-                              ___ RED ___   AZU AZU ___
+                              ___ RED ___   ___ AZU AZU
         >;
         layer-id = <LAYER_Mouse>;
       };
@@ -425,7 +425,7 @@
           ___ SPG GOL GOL GOL SPG                   ___ YLW GRN CYN MAJ ___
           ___ SPG GOL GOL GOL SPG                   ___ COR COR SPG SPG ___
                   ___ ___ SPG                           ___ ___ ___
-                              SPG SPG ___   RED ___ ___
+                              SPG SPG ___   ___ ___ RED
         >;
         layer-id = <LAYER_Number>;
       };
@@ -453,7 +453,7 @@
           ___ MAJ CYN GRN YLW ORN                   ORN YLW GRN CYN MAJ ___
           ___ ORN ORN ORN ORN ORN                   ORN ORN ORN ORN ORN ___
                   ___ ___ COR                           COR ___ ___
-                              COR COR ___   COR COR ___
+                              COR COR ___   ___ COR COR
         >;
         layer-id = <LAYER_Button>;
       };
@@ -467,7 +467,7 @@
           ___ MAJ CYN GRN YLW ORN                   ORN YLW GRN CYN MAJ ___
           ___ ORN ORN ORN ORN ORN                   ORN ORN ORN ORN ORN ___
                   ___ ___ COR                           COR ___ ___
-                              COR COR ___   COR COR ___
+                              COR COR ___   ___ COR COR
         >;
         layer-id = <LAYER_Button_Mac>;
       };
@@ -481,7 +481,7 @@
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
           ___ ___ ___ ___ ___ ___                   ___ ___ ___ ___ ___ ___
                   ___ ___ ___                           ___ ___ ___
-                              ___ ___ RED   ___ ___ RED
+                              ___ ___ RED   RED ___ ___
         >;
         layer-id = <LAYER_Typing>;
       };
@@ -495,7 +495,7 @@
           GDN YLW AZU AZU AZU GDN                   ___ ___ ___ ___ ___ ___
           SCL GRN GDN GDN GDN GDN                   ___ ___ ___ ___ ___ ___
                   GDN GDN ___                           ___ ___ ___
-                              COR CYN COR   ___ ___ RED
+                              COR CYN COR   RED ___ ___
         >;
         layer-id = <LAYER_Gaming>;
       };
@@ -509,7 +509,7 @@
           YLW AZU AZU AZU AZU GDN                   ___ ___ ___ ___ ___ ___
           SCL AZU AZU AZU AZU GDN                   ___ ___ ___ ___ ___ ___
                   GDN GDN ___                           ___ ___ ___
-                              COR CYN COR   ___ ___ RED
+                              COR CYN COR   RED ___ ___
         >;
         layer-id = <LAYER_Dota>;
       };
@@ -523,7 +523,7 @@
           GDN ___ AZU AZU AZU GDN                   GOL GOL GOL GOL GOL SNL
           GDN GDN ___ GDN GDN GDN                   GOL GOL GOL GOL GOL GOL
                   GDN GDN RED                           RED GOL GOL
-                              RED RED ___   RED RED ___
+                              RED RED ___   ___ RED RED
         >;
         layer-id = <LAYER_Lower>;
       };
